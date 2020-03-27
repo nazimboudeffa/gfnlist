@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>My GForce Now App</title>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="vendor/datatables.min.css" />
+  <script src="vendor/datatables.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="vendor/changelog.min.css" />
+
+
+</head>
+
+<body>
+
+<style media="screen">
+.navbar-dark .navbar-brand {
+ font-family: 'geforce-bold' !important;
+ color: white;
+ text-transform: uppercase;
+}
+li.nav-item {
+ text-transform: uppercase;
+ font-family: geforce-bold;
+}
+td.sorting_1 {
+ font-weight: 600;
+}
+.p-5 {
+ padding: 0.5rem!important;
+}
+.bg-dark {
+ background-color: #76b900!important;
+}
+thead {
+ text-transform: uppercase;
+ color: #76b900!important;
+ font-family: geforce-bold;
+}
+   tfoot {
+     display: table-header-group;
+ }
+html,
+body {
+height: 100%;
+font-family: geforcenow; !important
+}
+/* Other Classes for Page Styling */
+
+@font-face {
+font-family:"geforcenow";
+src: url("/fonts/geforce-light.ttf") format("truetype");
+}
+@font-face {
+font-family:"geforce-bold";
+src: url("/fonts/geforce-bold.ttf") format("truetype");
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+ color: #fff;
+ font-weight: bold;
+ margin-left: 5px;
+ text-transform: uppercase;
+ background-color: #76b900;
+}
+.upcase{
+text-transform: uppercase;
+}
+</style>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <a class="navbar-brand" href="/">GeForce NOW Games List</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/changelog">Changelog</a>
+        </li>
+    </div>
+  </nav>
+
+  <div class="card-body p-5">
+  <h4> GeForce NOW Games List Changelog</h4>
+  <p>Below lists the latest addition &amp; removals of games for GeForce NOW. Games are subject to change. </p>
+  <div class="section timeline">
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 19th March 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Blood Bowl 2</li>
+  <li><span class="badge badge-success">Added</span> The Escapists 2</li>
+  <li><span class="badge badge-success">Added</span> Gold Rush: The Game</li>
+  <li><span class="badge badge-success">Added</span> Granblue Fantasy: Versus</li>
+  <li><span class="badge badge-success">Added</span> Panzer Corps 2</li>
+  <li><span class="badge badge-success">Added</span> Stick Fight: The Game</li>
+  <li><span class="badge badge-success">Added</span> TT Isle of Man Ride on the Edge 2</li>
+  <li><span class="badge badge-success">Added</span> Wargame: Red Dragon</li>
+  <li><span class="badge badge-success">Added</span> The Witcher: Enhanced Edition Director’s Cut</li>
+  <li><span class="badge badge-success">Added</span> <span class="badge badge-warning">Free To Play</span> War Robots</li>
+  <li><span class="badge badge-success">Added</span> <span class="badge badge-warning">Free To Play</span> World of Warplanes</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 13th March 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Comanche</li>
+  <li><span class="badge badge-success">Added</span> Counter-Strike: Condition Zero</li>
+  <li><span class="badge badge-success">Added</span> Dreadlands</li>
+  <li><span class="badge badge-success">Added</span> Gujian3</li>
+  <li><span class="badge badge-success">Added</span> <span class="badge badge-warning">Free To Play</span> Dungeon Defenders II</li>
+  <li><span class="badge badge-success">Added</span> <span class="badge badge-warning">Free To Play</span> Path of Exile</li>
+  <li><span class="badge badge-success">Added</span> <span class="badge badge-warning">Free To Play</span> Ring of Elysium</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 10th March 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Conglomerate 451</li>
+  <li><span class="badge badge-success">Added</span> Heroes &amp; Generals</li>
+  <li><span class="badge badge-success">Added</span> Kingdom Come Deliverance (Epic Games Store)</li>
+  <li><span class="badge badge-success">Added</span> Richman10</li>
+  <li><span class="badge badge-success">Added</span> Titan Quest Anniversary Edition</li>
+  <li><span class="badge badge-success">Added</span> Victoria II</li>
+  <li><span class="badge badge-success">Added</span> Wolfenstein: Youngblood (Germany)</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Removed Game(s)</h4>
+  <small>released on 6th March 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-danger">Removed</span> XCOM 2</li>
+  <li><span class="badge badge-danger">Removed</span> BioShock Infinite</li>
+  <li><span class="badge badge-danger">Removed</span> BioShock™ Remastered</li>
+  <li><span class="badge badge-danger">Removed</span> BioShock™ 2 Remastered</li>
+  <li><span class="badge badge-danger">Removed</span> Borderlands 2</li>
+  <li><span class="badge badge-danger">Removed</span> Borderlands 3</li>
+  <li><span class="badge badge-danger">Removed</span> Borderlands Game of the Year Enhanced</li>
+  <li><span class="badge badge-danger">Removed</span> Borderlands: The Pre-Sequel</li>
+  <li><span class="badge badge-danger">Removed</span> Mafia III</li>
+  <li><span class="badge badge-danger">Removed</span> Sid Meier’s Civilization V</li>
+  <li><span class="badge badge-danger">Removed</span> Sid Meier’s Civilization VI</li>
+  <li><span class="badge badge-danger">Removed</span> The Darkness II</li>
+  <li><span class="badge badge-danger">Removed</span> NBA 2K Playgrounds 2</li>
+  <li><span class="badge badge-danger">Removed</span> NBA 2K Playgrounds 2</li>
+  <li><span class="badge badge-danger">Removed</span> NBA 2K17</li>
+  <li><span class="badge badge-danger">Removed</span> NBA 2K18</li>
+  <li><span class="badge badge-danger">Removed</span> NBA 2K19</li>
+  <li><span class="badge badge-danger">Removed</span> WWE 2K19</li>
+  <li><span class="badge badge-danger">Removed</span> WWE 2K20</li>
+  <li><span class="badge badge-danger">Removed</span> The Golf Club™ 2019 featuring PGA TOUR</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 3rd March 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Curse of the Dead Gods</li>
+  <li><span class="badge badge-success">Added</span> Dead or Alive 6</li>
+  <li><span class="badge badge-success">Added</span> Deadliest Catch: The Game</li>
+  <li><span class="badge badge-success">Added</span> Dungeon Defenders: Awakened</li>
+  <li><span class="badge badge-success">Added</span> Nioh Complete Edition</li>
+  <li><span class="badge badge-success">Added</span> Romance of the Three Kingdoms XIV</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added &amp; Removed Game(s)</h4>
+  <small>released on 28th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-danger">Removed</span> The Long Dark</li>
+  <li><span class="badge badge-success">Added</span> OVERPASS (Epic Games Store)</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 27th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Railway Empire</li>
+  <li><span class="badge badge-success">Added</span> <span class="badge badge-warning">Free To Play</span> Legends of Runeterra</li>
+  <li><span class="badge badge-success">Added</span> Northgard</li>
+  <li><span class="badge badge-success">Added</span> The Pedestrian</li>
+  <li><span class="badge badge-success">Added</span> DCL - The Game</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 25th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> DAEMON X MACHINA</li>
+  <li><span class="badge badge-success">Added</span> Fantasy General II</li>
+  <li><span class="badge badge-success">Added</span> For The King</li>
+  <li><span class="badge badge-success">Added</span> <span class="badge badge-warning">Free To Play</span> Neverwinter</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Removed Game(s)</h4>
+  <small>released on 21st Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-danger">Removed</span> Dishonored</li>
+  <li><span class="badge badge-danger">Removed</span> Dishonored 2</li>
+  <li><span class="badge badge-danger">Removed</span> Dishonored: Death of the Outsider</li>
+  <li><span class="badge badge-danger">Removed</span> Doom</li>
+  <li><span class="badge badge-danger">Removed</span> Everspace</li>
+  <li><span class="badge badge-danger">Removed</span> Fallout 3</li>
+  <li><span class="badge badge-danger">Removed</span> Fallout 76</li>
+  <li><span class="badge badge-danger">Removed</span> Fallout: New Vegas</li>
+  <li><span class="badge badge-danger">Removed</span> Prey</li>
+  <li><span class="badge badge-danger">Removed</span> Quake Champions</li>
+  <li><span class="badge badge-danger">Removed</span> Rage 2 (Bethesda.net / Steam)</li>
+  <li><span class="badge badge-danger">Removed</span> The Elder Scrolls Online: Elsweyr</li>
+  <li><span class="badge badge-danger">Removed</span> The Elder Scrolls V: Skyrim</li>
+  <li><span class="badge badge-danger">Removed</span> The Elder Scrolls V: Skyrim Special Edition</li>
+  <li><span class="badge badge-danger">Removed</span> The Evil Within 2</li>
+  <li><span class="badge badge-danger">Removed</span> Wolfenstein II: The New Colossus</li>
+  <li><span class="badge badge-danger">Removed</span> Wolfenstein: The New Order</li>
+  <li><span class="badge badge-danger">Removed</span> Wolfenstein: The Old Blood</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Removed Game(s)</h4>
+  <small>released on 19th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-danger">Removed</span> Tom Clancy's Rainbow Six® Siege - Technical Test Server</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+   <small>released on 14th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Wolcen: Lords of Mayhem</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 13th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Darksburg</li>
+  <li><span class="badge badge-success">Added</span> Planets Under Attack</li>
+  <li><span class="badge badge-success">Added</span> Ratropolis</li>
+  <li><span class="badge badge-success">Added</span> Saints Row IV</li>
+  <li><span class="badge badge-success">Added</span> Warhammer 40,000: Gladius - Relics of War</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added &amp; Removed Game(s)</h4>
+  <small>released on 11th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span>Araha: Curse of Yieun Island</li>
+  <li><span class="badge badge-success">Added</span> Days of War</li>
+  <li><span class="badge badge-success">Added</span> Darksburg</li>
+  <li><span class="badge badge-success">Added</span> MechWarrior Online Solaris 7</li>
+  <li><span class="badge badge-success">Added</span> Prison Architect</li>
+  <li><span class="badge badge-danger">Removed</span> Battle.net</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: Black Ops III</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: Black Ops 4</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: Infinite Warfare</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: Modern Warfare 2019</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: Modern Warfare 2 Singleplayer</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: Modern Warfare 2 Multiplayer</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: Modern Warfare 3 Multiplayer</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: Modern Warfare 3 Singleplayer</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty 4: Modern Warfare</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: World at War</li>
+  <li><span class="badge badge-danger">Removed</span> Call of Duty: WWII</li>
+  <li><span class="badge badge-danger">Removed</span> Construction Simulator 2 US - Pocket Edition</li>
+  <li><span class="badge badge-danger">Removed</span> Crash Bandicoot N. Sane Trilogy</li>
+  <li><span class="badge badge-danger">Removed</span> Diablo III</li>
+  <li><span class="badge badge-danger">Removed</span> Hearthstone: Heroes of Warcraft</li>
+  <li><span class="badge badge-danger">Removed</span> Heroes of the Storm</li>
+  <li><span class="badge badge-danger">Removed</span> Overwatch</li>
+  <li><span class="badge badge-danger">Removed</span> Sekiro: Shadows Die Twice</li>
+  <li><span class="badge badge-danger">Removed</span> Spyro Reignited Trilogy</li>
+  <li><span class="badge badge-danger">Removed</span> StarCraft Remastered</li>
+  <li><span class="badge badge-danger">Removed</span> StarCraft II: Legacy of the Void</li>
+  <li><span class="badge badge-danger">Removed</span> World of Warcraft: Battle for Azeroth</li>
+  <li><span class="badge badge-danger">Removed</span> World of Warcraft Classic</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 6th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> The Dark Crystal: Age of Resistance Tactics</li>
+  <li><span class="badge badge-success">Added</span> Car Mechanic Simulator 2018</li>
+  <li><span class="badge badge-success">Added</span> TemTem</li>
+  <li><span class="badge badge-success">Added</span> <span class="badge badge-warning">Free To Play</span> Star Trek Online</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added Game(s)</h4>
+  <small>released on 4th Feburary 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Asterix &amp; Obelix XXL 3 - The Crystal Menhir</li>
+  <li><span class="badge badge-success">Added</span> Monster Energy Supercross - The Official Videogame 3</li>
+  <li><span class="badge badge-success">Added</span> Quake II RTX</li>
+  <li><span class="badge badge-success">Added</span> Realm Grinder</li>
+  <li><span class="badge badge-success">Added</span> Rugby 20</li>
+  <li><span class="badge badge-success">Added</span> Warhammer: End Times – Vermintide</li>
+  </ul>
+  </div></div></div>
+  <div class="timeline-item">
+  <div class="timeline-left">
+  <div class="timeline-icon"></div>
+  </div>
+  <div class="changes timeline-content">
+  <h4>Added &amp; Removed Game(s)</h4>
+  <small>released on 31st January 2020</small>
+  <div>
+  <ul>
+  <li><span class="badge badge-success">Added</span> Commandos 2 - HD Remaster</li>
+  <li><span class="badge badge-success">Added</span> DARK SOULS II: Scholar of the First Sin [Re-Release]</li>
+  <li><span class="badge badge-success">Added</span> Praetorians - HD Remaster </li>
+  <li><span class="badge badge-danger">Removed</span> Star Trek Online</li>
+  <li><span class="badge badge-danger">Removed</span> eFootball PES 2020</li>
+  <li><span class="badge badge-danger">Removed</span> eFootball PES 2020 DEMO</li>
+  <li><span class="badge badge-danger">Removed</span> Pro Evolution Soccer 2017</li>
+  <li><span class="badge badge-danger">Removed</span> Pro Evolution Soccer 2018</li>
+  <li><span class="badge badge-danger">Removed</span> PRO EVOLUTION SOCCER 2019</li>
+  <li><span class="badge badge-danger">Removed</span> PRO EVOLUTION SOCCER 2019 LITE</li>
+  <li><span class="badge badge-danger">Removed</span> Metal Gear Survive</li>
+  <li><span class="badge badge-danger">Removed</span> METAL GEAR SOLID V: THE PHANTOM PAIN</li>
+  <li><span class="badge badge-danger">Removed</span> ZONE OF THE ENDERS THE 2nd RUNNER - M?RS / ANUBIS ZONE OF THE ENDERS :M∀RS</li>
+  </ul>
+  </div></div></div>
+  </div></div>
+</body>
+
+</html>

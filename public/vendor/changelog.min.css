@@ -1,0 +1,58 @@
+.timeline .timeline-item {
+    display: flex;
+    margin-bottom: 1.2rem;
+    position: relative
+}
+
+.timeline .timeline-item::before {
+    background: #e7e9ed;
+    content: "";
+    height: 100%;
+    left: 11px;
+    position: absolute;
+    top: 1.2rem;
+    width: 2px
+}
+
+.timeline .timeline-item .timeline-left {
+    flex: 0 0 auto
+}
+
+.timeline .timeline-item .timeline-content {
+    flex: 1 1 auto;
+    padding: 2px 0 2px .8rem
+}
+
+.timeline .timeline-item .timeline-icon {
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    height: 1.2rem;
+    text-align: center;
+    width: 1.2rem
+}
+
+.timeline .timeline-item .timeline-icon::before {
+    border: .1rem solid #76b900!important;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: .4rem;
+    left: .4rem;
+    position: absolute;
+    top: .4rem;
+    width: .4rem
+}
+
+.timeline .timeline-item .timeline-icon.icon-lg {
+    background: #76b900!important;
+    line-height: 1.2rem
+}
+
+.timeline .timeline-item .timeline-icon.icon-lg::before {
+    content: none
+}
+.changes li {
+    margin-left: -40px;
+    list-style: none;
+}
