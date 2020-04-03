@@ -1,6 +1,15 @@
 {
   "data": [
     {
+    "title": "Mount & Blade II: Bannerlord",
+    "publisher": "TaleWorlds Entertainment",
+    "genre": "Role Playing,Action,Strategy,Simulation",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+   },
+    {
     "title": "Jagged Alliance 2 - Wildfire",
     "publisher": "TopWare Interactive",
     "genre": "Role Playing,Strategy",
