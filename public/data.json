@@ -1,68 +1,158 @@
 {
   "data": [
-    {
-    "title": "Mount & Blade II: Bannerlord",
-    "publisher": "TaleWorlds Entertainment",
-    "genre": "Role Playing,Action,Strategy,Simulation",
-    "hs": "No",
-    "fo": "No",
-    "ftp": "No",
-    "sl": "Steam"
-   },
-    {
-    "title": "Jagged Alliance 2 - Wildfire",
-    "publisher": "TopWare Interactive",
-    "genre": "Role Playing,Strategy",
-    "hs": "No",
-    "fo": "No",
-    "ftp": "No",
-    "sl": "Steam"
-   },
-    {
-    "title": "IL-2 Sturmovik: Battle of Stalingrad",
-    "publisher": "1C Company",
-    "genre": "Action,Massively Multiplayer Online,Simulation",
-    "hs": "No",
-    "fo": "No",
-    "ftp": "No",
-    "sl": "Steam"
-   },
-    {
-    "title": "Headsnatchers",
-    "publisher": "Iceberg Interactive",
-    "genre": "Action,Casual,Indie,Sports",
-    "hs": "No",
-    "fo": "No",
-    "ftp": "No",
-    "sl": "Steam"
-   },
-    {
-    "title": "The Guild 3",
-    "publisher": "THQ Nordic GmbH",
-    "genre": "Role Playing,Simulation,Strategy",
-    "hs": "No",
-    "fo": "No",
-    "ftp": "No",
-    "sl": "Steam"
-   },
-    {
-    "title": "Dungeons 3",
-    "publisher": "Kalypso Media Digital",
-    "genre": "Simulation,Strategy",
-    "hs": "No",
-    "fo": "No",
-    "ftp": "No",
-    "sl": "Steam"
-   },
-    {
-    "title": "Danganronpa: Trigger Happy Havoc",
-    "publisher": "Spike Chunsoft Co., Ltd.",
-    "genre": "Adventure,Puzzle",
-    "hs": "No",
-    "fo": "No",
-    "ftp": "No",
-    "sl": "Steam"
-   },
+  {
+  "title": "Tropico 5",
+  "publisher": "Kalypso Media Group GmbH",
+  "genre": "Role Playing,Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Tropico 5",
+  "publisher": "Kalypso Media Group GmbH",
+  "genre": "Role Playing,Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "The Cycle",
+  "publisher": "YAGER Development",
+  "genre": "Action,First-Person Shooter,Massively Multiplayer Online",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Epic Games Launcher"
+  },
+  {
+  "title": "SpeedRunners",
+  "publisher": "tinyBuild",
+  "genre": "Action,Casual,Indie,Racing,Sports",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "POSTAL 2",
+  "publisher": "Running With Scissors",
+  "genre": "Action,Adventure,First-Person Shooter,Indie",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Mount & Blade: With Fire & Sword",
+  "publisher": "TaleWorlds Entertainment",
+  "genre": "Action,Role Playing,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Knights and Merchants",
+  "publisher": "TopWare Interactive",
+  "genre": "Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Jack Orlando: Director's Cut",
+  "publisher": "TopWare Interactive",
+  "genre": "Adventure",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Dwarrows",
+  "publisher": "Lithic Entertainment Inc.",
+  "genre": "Adventure,Puzzle,Simulation",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Danganronpa 2: Goodbye Despair",
+  "publisher": "Spike Chunsoft Co., Ltd.",
+  "genre": "Adventure",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Mount & Blade II: Bannerlord",
+  "publisher": "TaleWorlds Entertainment",
+  "genre": "Role Playing,Action,Strategy,Simulation",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Jagged Alliance 2 - Wildfire",
+  "publisher": "TopWare Interactive",
+  "genre": "Role Playing,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "IL-2 Sturmovik: Battle of Stalingrad",
+  "publisher": "1C Company",
+  "genre": "Action,Massively Multiplayer Online,Simulation",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Headsnatchers",
+  "publisher": "Iceberg Interactive",
+  "genre": "Action,Casual,Indie,Sports",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "The Guild 3",
+  "publisher": "THQ Nordic GmbH",
+  "genre": "Role Playing,Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Dungeons 3",
+  "publisher": "Kalypso Media Digital",
+  "genre": "Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Danganronpa: Trigger Happy Havoc",
+  "publisher": "Spike Chunsoft Co., Ltd.",
+  "genre": "Adventure,Puzzle",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
   {
   "title": "Arma 2: Operation Arrowhead",
   "publisher": "Bohemia Interactive",
@@ -71,7 +161,7 @@
   "fo": "No",
   "ftp": "No",
   "sl": "Steam"
- },
+  },
  {
  "title": "Apex Legends™",
  "publisher": "Electronic Arts Inc.",
