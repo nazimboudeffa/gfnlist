@@ -1,14 +1,68 @@
 {
   "data": [
-  {
-  "title": "Tropico 5",
-  "publisher": "Kalypso Media Group GmbH",
-  "genre": "Role Playing,Simulation,Strategy",
-  "hs": "No",
-  "fo": "No",
-  "ftp": "No",
-  "sl": "Steam"
-  },
+    {
+    "title": "S.T.A.L.K.E.R.: Call of Pripyat",
+    "publisher": "GSC Game World",
+    "genre": "Action,First-Person Shooter,Role Playing",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Sniper: Ghost Warrior Contracts",
+    "publisher": "CI Games",
+    "genre": "Action,First-Person Shooter",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Sniper Ghost Warrior 3",
+    "publisher": "CI Games",
+    "genre": "Action,First-Person Shooter",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Saints Row: The Third",
+    "publisher": "Deep Silver",
+    "genre": "Action",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Onmyoji",
+    "publisher": "NetEase Games",
+    "genre": "Adventure,Free To Play,Role Playing,Strategy",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Main Assembly Beta",
+    "publisher": "Team17 Digital",
+    "genre": "Action,Adventure,Indie,Simulation",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Bus Simulator 18",
+    "publisher": "Astragon Entertainment",
+    "genre": "Simulation",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
   {
   "title": "Tropico 5",
   "publisher": "Kalypso Media Group GmbH",
