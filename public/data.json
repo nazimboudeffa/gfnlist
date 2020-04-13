@@ -882,15 +882,6 @@
  "sl": "NCSOFT Launcher"
 },
 {
- "title": "Albino Lullaby: Episode 1",
- "publisher": "Ape Law",
- "genre": "Action,Adventure,Indie",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
  "title": "Albion Online",
  "publisher": "Sandbox Interactive GmbH",
  "genre": "Massively Multiplayer Online,Role Playing",
@@ -934,15 +925,6 @@
  "fo": "No",
  "ftp": "No",
  "sl": "Uplay"
-},
-{
- "title": "AO International Tennis",
- "publisher": "Big Ant Studios",
- "genre": "Sports",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
 },
 {
  "title": "Apollo 11 Lunar Landing Demo",
@@ -1422,15 +1404,6 @@
  "sl": "Steam"
 },
 {
- "title": "Constructor Plus",
- "publisher": "System 3",
- "genre": "Indie,Simulation,Strategy",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
  "title": "Cooking Simulator",
  "publisher": "Wastelands Interactive",
  "genre": "Casual,Indie,Simulation",
@@ -1465,15 +1438,6 @@
  "fo": "No",
  "ftp": "No",
  "sl": "N/A"
-},
-{
- "title": "Crying Suns",
- "publisher": "Humble Bundle",
- "genre": "Indie,Strategy",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
 },
 {
  "title": "Cultist Simulator",
@@ -1764,15 +1728,6 @@
  "sl": "Steam"
 },
 {
- "title": "Double Turn",
- "publisher": "Inwave Labs",
- "genre": "Action,Indie",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
  "title": "Dungreed",
  "publisher": "TEAM HORAY",
  "genre": "Action,Indie",
@@ -2052,15 +2007,6 @@
  "sl": "Steam"
 },
 {
- "title": "Fimbul",
- "publisher": "Wild River Games",
- "genre": "Action,Adventure,Indie",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
  "title": "Firewatch",
  "publisher": "Panic",
  "genre": "Adventure,Indie",
@@ -2145,15 +2091,6 @@
  "title": "Foundation",
  "publisher": "Polymorph Games",
  "genre": "Indie,Simulation,Strategy",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
- "title": "Fractured Lands",
- "publisher": "Unbroken Studios",
- "genre": "Racing,First-Person Shooter,Action",
  "hs": "No",
  "fo": "No",
  "ftp": "No",
@@ -2448,27 +2385,9 @@
  "sl": "Steam"
 },
 {
- "title": "I’m not a Monster",
- "publisher": "Alawar Premium",
- "genre": "Indie,Massively Multiplayer Online,Role Playing,Strategy",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
  "title": "Ice Age: Scrat's Nutty Adventure",
  "publisher": "Outright Games Ltd",
  "genre": "Adventure,Family",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
- "title": "Immortal: Unchained",
- "publisher": "Game Odyssey Limited",
- "genre": "Action,Adventure,Role Playing",
  "hs": "No",
  "fo": "No",
  "ftp": "No",
@@ -2808,15 +2727,6 @@
  "sl": "Steam"
 },
 {
- "title": "Last Tide",
- "publisher": "Digital Confectioners",
- "genre": "Action,Indie,Massively Multiplayer Online",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
  "title": "Left 4 Dead 2",
  "publisher": "Valve",
  "genre": "Action,First-Person Shooter",
@@ -2986,15 +2896,6 @@
  "fo": "No",
  "ftp": "No",
  "sl": "N/A"
-},
-{
- "title": "MEG 9: Lost Echoes",
- "publisher": "Skunkwerks Kinetic",
- "genre": "Action,Indie,Strategy",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
 },
 {
  "title": "Men of War: Assault Squad 2",
@@ -3681,15 +3582,6 @@
  "sl": "Steam"
 },
 {
- "title": "Race With Ryan",
- "publisher": "Outright Games Ltd",
- "genre": "Family,Racing,Sports",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
  "title": "RAD",
  "publisher": "BANDAI NAMCO Entertainment America Inc.",
  "genre": "Action",
@@ -3749,15 +3641,6 @@
  "genre": "Action,Adventure,Role Playing",
  "hs": "No",
  "fo": "Yes",
- "ftp": "No",
- "sl": "Steam"
-},
-{
- "title": "Rend",
- "publisher": "Frostkeep Studios",
- "genre": "Action,Adventure,Indie,Massively Multiplayer OnlineRole Playing,Strategy",
- "hs": "No",
- "fo": "No",
  "ftp": "No",
  "sl": "Steam"
 },
@@ -4053,15 +3936,6 @@
  "title": "Spintires: MudRunner",
  "publisher": "Focus Home Interactive",
  "genre": "Simulation,Racing",
- "hs": "No",
- "fo": "No",
- "ftp": "No",
- "sl": "Steam"
-},
-{
- "title": "SpyParty",
- "publisher": "Chris Hecker",
- "genre": "Action,Indie,Simulation,Strategy",
  "hs": "No",
  "fo": "No",
  "ftp": "No",
