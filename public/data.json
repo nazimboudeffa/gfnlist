@@ -1,6 +1,60 @@
 {
   "data": [
     {
+    "title": "Tyranny",
+    "publisher": "Unknown Worlds Entertainment",
+    "genre": "Action,First-Person Shooter,Indie,Massively Multiplayer Online,Strategy",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Natural Selection 2",
+    "publisher": "Unknown Worlds Entertainment",
+    "genre": "Action,First-Person Shooter",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Mordheim: City of the Damned",
+    "publisher": "Focus Home Interactive",
+    "genre": "Role Playing,Strategy",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Last Oasis",
+    "publisher": "Donkey Crew",
+    "genre": "Action,Adventure",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "EARTH DEFENSE FORCE 4.1 WINGDIVER THE SHOOTER",
+    "publisher": "D3 Publisher Inc.",
+    "genre": "Action",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Construction Simulator 2015",
+    "publisher": "505 Games",
+    "genre": "Casual,Simulation",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
     "title": "S.T.A.L.K.E.R.: Call of Pripyat",
     "publisher": "GSC Game World",
     "genre": "Action,First-Person Shooter,Role Playing",
