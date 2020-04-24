@@ -26,13 +26,25 @@ def parse() :
                 for genre in game['genres'] :
                     if genre == 'Free To Play' :
                         ftp = 'Yes'
-                # TODO : Epic Games, NCSOFT Launcher, LoL Launcher, Wargaming Launcher, Bethesda Launcher
                 if game['steamUrl'] == '' :
                     if game['publisher'] == 'Electronic Arts Inc.' :
                         sl = 'Origin'
-                    else :
-                        if game['publisher'] == 'Ubisoft' :
-                            sl = 'Uplay'
+                    if game['publisher'] == 'Ubisoft' :
+                        sl = 'Uplay'
+                    if game['publisher'] == 'Epic Games, Inc.' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'Deep Silver' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'YAGER Development' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'NCSOFT' :
+                        sl = 'NCSOFT Launcher'
+                    if game['publisher'] == 'Riot Games' :
+                        sl = 'LoL Launcher'
+                    if game['publisher'] == 'Wargaming' :
+                        sl = 'Wargaming Launcher'
+                    if game['publisher'] == 'Bethesda Softworks' :
+                        sl = 'Bethesda Launcher'
                 data['data'].append({
                     'title': game['title'],
                     'publisher': game['publisher'],
@@ -42,6 +54,6 @@ def parse() :
                     'ftp': ftp,
                     'sl': sl
                 })
-            with open('mydata.json', 'w') as outfile:
+            with open('data.json', 'w') as outfile:
                 json.dump(data, outfile)
 parse()
