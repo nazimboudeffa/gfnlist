@@ -54,6 +54,6 @@ def parse() :
                     'ftp': ftp,
                     'sl': sl
                 })
-            with open('data.json', 'w') as outfile:
+            with open('public/data.json', 'w') as outfile:
                 json.dump(data, outfile)
 parse()
