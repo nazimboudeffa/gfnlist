@@ -26,6 +26,7 @@ def parse() :
                 for genre in game['genres'] :
                     if genre == 'Free To Play' :
                         ftp = 'Yes'
+                # TODO : Epic Games, NCSOFT Launcher, LoL Launcher, Wargaming Launcher, Bethesda Launcher
                 if game['steamUrl'] == '' :
                     if game['publisher'] == 'Electronic Arts Inc.' :
                         sl = 'Origin'
