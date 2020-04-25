@@ -18,8 +18,12 @@ app.get('/changelog', function (req, res) {
   res.render('changelog')
 })
 
+app.get('/info', function (req, res) {
+  res.render('info')
+})
+
 let port = 3000;
 
 app.listen(port, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('GFNList app listening on port 3000!')
 })
