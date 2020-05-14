@@ -22,7 +22,7 @@ def menu():
 
     choice = input("""
                       A: Generate DATA.JSON
-                      B: Generate CHANGELOG.JSON
+                      B: Generate CHANGELOG
                       Q: Quit/Log Out
                       Please enter your choice: """)
 
@@ -46,14 +46,9 @@ def changelog():
        sys.exit()
 
     with open(filepath, encoding="utf8") as fp:
-       data = {}
-       data['data'] = []
+       data = []
        for line in fp:
-           data['data'].append({
-            'title' : line.strip('\n')
-           })
-       with open('public/changelog.json', 'w') as outfile:
-           json.dump(data, outfile)
+           print('<li><span class="badge badge-success">Added</span> ' + line.strip('\n') + '</li>')
 
 def parse() :
     if not os.path.exists('gfnpc.json') :
