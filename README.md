@@ -5,4 +5,6 @@
 
 This is a clone of the site [gfnlist.com](https://gfnlist.com/) to make the list of games available on GeForceNow easier to maintain
 
+If you think that [GeForce NOW Game Catalog Status](https://nvidia.custhelp.com/app/answers/detail/a_id/5026) helps you more to play with the games list, use it instead
+
 ![GFN](public/geforcenow.jpg)
