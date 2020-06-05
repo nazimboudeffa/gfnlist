@@ -1,5 +1,4 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/nazimboudeffa/gfnlist)
-
 ![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/geforcenow?style=social)
 
 # GeForce Now Games List
