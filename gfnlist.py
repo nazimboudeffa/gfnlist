@@ -66,8 +66,8 @@ def parse() :
                 ftp = 'No'
                 sl = 'Steam'
                 g = ','.join(game['genres'])
-                if game['isHighlightsSupported'] :
-                    hs = 'Yes'
+                #if game['isHighlightsSupported'] :
+                #    hs = 'Yes'
                 if game['isFullyOptimized'] :
                     fo = 'Yes'
                 for genre in game['genres'] :
@@ -96,7 +96,7 @@ def parse() :
                     'title': game['title'],
                     'publisher': game['publisher'],
                     'genre': g,
-                    'hs': hs,
+                    #'hs': hs,
                     'fo': fo,
                     'ftp': ftp,
                     'sl': sl
