@@ -17,7 +17,7 @@ def parse() :
                 hs = 'No'
                 fo = 'No'
                 ftp = 'No'
-                sl = 'N/A'
+                sl = 'Steam'
                 g = ','.join(game['genres'])
                 #if game['isHighlightsSupported'] :
                 #    hs = 'Yes'
@@ -26,31 +26,25 @@ def parse() :
                 for genre in game['genres'] :
                     if genre == 'Free To Play' :
                         ftp = 'Yes'
-                if game['store'] != 'Steam' :
-                    if game['store'] == 'Origin' :
+                if game['steamUrl'] == '' :
+                    if game['publisher'] == 'Electronic Arts Inc.' :
                         sl = 'Origin'
-                    if '_uplay' in game['sortName'] :
+                    if game['publisher'] == 'Ubisoft' :
                         sl = 'Uplay'
-                    if '_epic_game' in game['sortName'] :
-                        sl = 'Epic Games'
-                    if '_albion_launcher' in game['sortName'] :
-                        sl = 'Albion Launcher'
+                    if game['publisher'] == 'Epic Games, Inc.' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'Deep Silver' :
+                        sl = 'Epic Games Launcher'
                     if game['publisher'] == 'YAGER Development' :
-                        sl = 'Epic Games'
-                    if game['publisher'] == 'NCsoft Corp.' :
-                        sl = 'NCSOFT'
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'NCSOFT' :
+                        sl = 'NCSOFT Launcher'
                     if game['publisher'] == 'Riot Games' :
                         sl = 'LoL Launcher'
                     if game['publisher'] == 'Wargaming' :
-                        sl = 'Wargaming'
+                        sl = 'Wargaming Launcher'
                     if game['publisher'] == 'Bethesda Softworks' :
-                        sl = 'Bethesda'
-                    if game['publisher'] == 'DMM Games' :
-                        sl = 'Wargaming'
-                    if game['publisher'] == 'Gaijin Entertainment' :
-                        sl = 'Gaijin'
-                else :
-                    sl = 'Steam'
+                        sl = 'Bethesda Launcher'
                 data['data'].append({
                     'title': game['title'],
                     'publisher': game['publisher'],
