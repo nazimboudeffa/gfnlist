@@ -33,6 +33,8 @@ def parse() :
                         sl = 'Uplay'
                     if '_epic_game' in game['sortName'] :
                         sl = 'Epic Games'
+                    if '_epic' in game['sortName'] :
+                        sl = 'Epic Games'
                     if '_albion_launcher' in game['sortName'] :
                         sl = 'Albion Launcher'
                     if game['publisher'] == 'YAGER Development' :
