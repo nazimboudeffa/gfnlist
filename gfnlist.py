@@ -77,7 +77,8 @@ def parse() :
                     if game['store'] == 'Origin' :
                         sl = 'Origin'
                     if game['store'] == 'UPLAY' :
-                        sl = 'Uplay'
+                        if 'russia' in game['sortName'] : sl = 'Uplay Russia'
+                        else : sl = 'Uplay'    
                     if game['store'] == 'Epic' :
                         sl = 'Epic Games Launcher'
                     if game['publisher'] == 'NCsoft Corp.' :
@@ -85,9 +86,16 @@ def parse() :
                     if game['publisher'] == 'Riot Games, Inc.' :
                         sl = 'LoL Launcher'
                     if game['publisher'] == 'Wargaming Group Limited' :
-                        sl = 'Wargaming Launcher'
+                        if 'asia' in game['sortName'] : sl = 'Wargaming Asia'
+                        if 'europe' in game['sortName'] : sl = 'Wargaming Europe'
+                        if 'north_america' in game['sortName'] : sl = 'Wargaming North America'
+                        if 'russia' in game['sortName'] : sl = 'Wargaming Russia'
                     if game['publisher'] == 'Bethesda Softworks' :
                         sl = 'Bethesda Launcher'
+                    if game['publisher'] == 'Gaijin Entertainment' :
+                        sl = 'WARTHUNDER'
+                    if game['publisher'] == 'DMM Games' :
+                        sl = 'WARTHUNDER Japan'
                 data['data'].append({
                     'title': game['title'],
                     'publisher': game['publisher'],
