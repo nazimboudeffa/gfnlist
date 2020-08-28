@@ -78,7 +78,7 @@ def parse() :
                         sl = 'Origin'
                     if game['store'] == 'UPLAY' :
                         if 'russia' in game['sortName'] : sl = 'Uplay Russia'
-                        else : sl = 'Uplay'    
+                        else : sl = 'Uplay'
                     if game['store'] == 'Epic' :
                         sl = 'Epic Games Launcher'
                     if game['publisher'] == 'NCsoft Corp.' :
@@ -96,6 +96,10 @@ def parse() :
                         sl = 'WARTHUNDER'
                     if game['publisher'] == 'DMM Games' :
                         sl = 'WARTHUNDER Japan'
+                else :
+                    if game['publisher'] == 'Square Enix Europe' :
+                        if 'russia' in game['sortName'] : sl = 'Steam Russia'
+                        if 'korea' in game['sortName'] : sl = 'Steam Korea'
                 data['data'].append({
                     'title': game['title'],
                     'publisher': game['publisher'],
