@@ -74,17 +74,21 @@ def parse() :
                     if genre == 'Free To Play' :
                         ftp = 'Yes'
                 if game['steamUrl'] == '' :
-                    if game['store'] == 'Origin' :
+                    if game['publisher'] == 'Electronic Arts Inc.' :
                         sl = 'Origin'
-                    if game['store'] == 'UPLAY' :
+                    if game['publisher'] == 'Ubisoft' :
                         sl = 'Uplay'
-                    if game['store'] == 'Epic' :
+                    if game['publisher'] == 'Epic Games, Inc.' :
                         sl = 'Epic Games Launcher'
-                    if game['publisher'] == 'NCsoft Corp.' :
+                    if game['publisher'] == 'Deep Silver' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'YAGER Development' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'NCSOFT' :
                         sl = 'NCSOFT Launcher'
-                    if game['publisher'] == 'Riot Games, Inc.' :
+                    if game['publisher'] == 'Riot Games' :
                         sl = 'LoL Launcher'
-                    if game['publisher'] == 'Wargaming Group Limited' :
+                    if game['publisher'] == 'Wargaming' :
                         sl = 'Wargaming Launcher'
                     if game['publisher'] == 'Bethesda Softworks' :
                         sl = 'Bethesda Launcher'
