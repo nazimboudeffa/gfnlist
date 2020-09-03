@@ -61,11 +61,14 @@ def parse() :
             data = {}
             data['data'] = []
             for game in games :
+                ac = 'No'
                 hs = 'No'
                 fo = 'No'
                 ftp = 'No'
                 sl = 'Steam'
                 g = ','.join(game['genres'])
+                if game['status'] == 'AVAILABLE' :
+                    ac = 'Yes'
                 #if game['isHighlightsSupported'] :
                 #    hs = 'Yes'
                 if game['isFullyOptimized'] :
@@ -107,7 +110,8 @@ def parse() :
                     #'hs': hs,
                     'fo': fo,
                     'ftp': ftp,
-                    'sl': sl
+                    'sl': sl,
+                    'ac': ac
                 })
             with open('public/data.json', 'w') as outfile:
                 json.dump(data, outfile)
