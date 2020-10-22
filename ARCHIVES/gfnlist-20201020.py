@@ -61,36 +61,53 @@ def parse() :
             data = {}
             data['data'] = []
             for game in games :
+                ac = 'No'
                 hs = 'No'
                 fo = 'No'
                 ftp = 'No'
                 sl = 'Steam'
                 g = ','.join(game['genres'])
-                if game['isHighlightsSupported'] :
-                    hs = 'Yes'
                 if game['status'] == 'AVAILABLE' :
                     ac = 'Yes'
+                #if game['isHighlightsSupported'] :
+                #    hs = 'Yes'
                 if game['isFullyOptimized'] :
                     fo = 'Yes'
                 for genre in game['genres'] :
                     if genre == 'Free To Play' :
                         ftp = 'Yes'
                 if game['steamUrl'] == '' :
-                    if game['publisher'] == 'Electronic Arts Inc.' :
+                    if game['store'] == 'Origin' :
                         sl = 'Origin'
-                    if game['publisher'] == 'Ubisoft' :
-                        sl = 'Uplay'
-                    if game['publisher'] == 'DMM Games' :
-                        sl = 'Wargaming'
-                    if game['publisher'] == 'Gaijin Entertainment' :
-                        sl = 'Gaijin'
+                    if game['store'] == 'UPLAY' :
+                        if 'russia' in game['sortName'] : sl = 'Uplay Russia'
+                        else : sl = 'Uplay'
+                    if game['store'] == 'Epic' :
+                        sl = 'Epic Games Launcher'
                     if game['publisher'] == 'NCsoft Corp.' :
-                        sl = 'NCSOFT'
+                        sl = 'NCSOFT Launcher'
+                    if game['publisher'] == 'Riot Games, Inc.' :
+                        sl = 'LoL Launcher'
+                    if game['publisher'] == 'Wargaming Group Limited' :
+                        if 'asia' in game['sortName'] : sl = 'Wargaming Asia'
+                        if 'europe' in game['sortName'] : sl = 'Wargaming Europe'
+                        if 'north_america' in game['sortName'] : sl = 'Wargaming North America'
+                        if 'russia' in game['sortName'] : sl = 'Wargaming Russia'
+                    if game['publisher'] == 'Bethesda Softworks' :
+                        sl = 'Bethesda Launcher'
+                    if game['publisher'] == 'Gaijin Entertainment' :
+                        sl = 'WARTHUNDER'
+                    if game['publisher'] == 'DMM Games' :
+                        sl = 'WARTHUNDER Japan'
+                else :
+                    if game['publisher'] == 'Square Enix Europe' :
+                        if 'russia' in game['sortName'] : sl = 'Steam Russia'
+                        if 'korea' in game['sortName'] : sl = 'Steam Korea'
                 data['data'].append({
                     'title': game['title'],
                     'publisher': game['publisher'],
                     'genre': g,
-                    'hs': hs,
+                    #'hs': hs,
                     'fo': fo,
                     'ftp': ftp,
                     'sl': sl,
