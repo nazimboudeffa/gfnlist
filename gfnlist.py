@@ -80,12 +80,18 @@ def parse() :
                         sl = 'Origin'
                     if game['publisher'] == 'Ubisoft' :
                         sl = 'Uplay'
-                    if game['publisher'] == 'DMM Games' :
-                        sl = 'Wargaming'
-                    if game['publisher'] == 'Gaijin Entertainment' :
-                        sl = 'Gaijin'
-                    if game['publisher'] == 'NCsoft Corp.' :
-                        sl = 'NCSOFT'
+                    if game['publisher'] == 'Epic Games, Inc.' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'Deep Silver' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'YAGER Development' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'NCSOFT' :
+                        sl = 'NCSOFT Launcher'
+                    if game['publisher'] == 'Riot Games' :
+                        sl = 'LoL Launcher'
+                    if game['publisher'] == 'Wargaming' :
+                        sl = 'Wargaming Launcher'
                 data['data'].append({
                     'title': game['title'],
                     'publisher': game['publisher'],
