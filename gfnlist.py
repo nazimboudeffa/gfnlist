@@ -64,7 +64,7 @@ def parse() :
                 hs = 'No'
                 fo = 'No'
                 ftp = 'No'
-                sl = 'Steam'
+                sl = 'N/A'
                 g = ','.join(game['genres'])
                 if game['isHighlightsSupported'] :
                     hs = 'Yes'
@@ -92,6 +92,8 @@ def parse() :
                         sl = 'LoL Launcher'
                     if game['publisher'] == 'Wargaming' :
                         sl = 'Wargaming Launcher'
+                else :
+                    sl = 'Steam'
                 data['data'].append({
                     'title': game['title'],
                     'publisher': game['publisher'],
