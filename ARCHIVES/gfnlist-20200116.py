@@ -52,7 +52,7 @@ def changelog():
 
 def parse() :
     if not os.path.exists('gfnpc.json') :
-        fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/locales/gfnpc-en-GB.json', out='gfnpc.json')
+        fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json', out='gfnpc.json')
         with open('gfnpc.json', encoding="utf8") as f :
             games = json.loads(f.read())
     else :
@@ -61,13 +61,13 @@ def parse() :
             data = {}
             data['data'] = []
             for game in games :
-                #hs = 'No'
+                hs = 'No'
                 fo = 'No'
                 ftp = 'No'
                 sl = 'N/A'
                 g = ','.join(game['genres'])
-                #if game['isHighlightsSupported'] :
-                #    hs = 'Yes'
+                if game['isHighlightsSupported'] :
+                    hs = 'Yes'
                 if game['status'] == 'AVAILABLE' :
                     ac = 'Yes'
                 if game['isFullyOptimized'] :
@@ -76,24 +76,29 @@ def parse() :
                     if genre == 'Free To Play' :
                         ftp = 'Yes'
                 if game['steamUrl'] == '' :
-                    if game['store'] == '' :
-                        if game['publisher'] == 'Electronic Arts Inc.' :
-                            sl = 'Origin'
-                        if game['publisher'] == 'NCSOFT' :
-                            sl = 'NCSOFT Launcher'
-                        if game['publisher'] == 'Riot Games' :
-                            sl = 'LoL Launcher'
-                        if game['publisher'] == 'Gaijin Entertainment' :
-                            sl = 'Wargaming Launcher'
-                    else :
-                        sl = game['store']
+                    if game['publisher'] == 'Electronic Arts Inc.' :
+                        sl = 'Origin'
+                    if game['publisher'] == 'Ubisoft' :
+                        sl = 'Uplay'
+                    if game['publisher'] == 'Epic Games, Inc.' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'Deep Silver' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'YAGER Development' :
+                        sl = 'Epic Games Launcher'
+                    if game['publisher'] == 'NCSOFT' :
+                        sl = 'NCSOFT Launcher'
+                    if game['publisher'] == 'Riot Games' :
+                        sl = 'LoL Launcher'
+                    if game['publisher'] == 'Wargaming' :
+                        sl = 'Wargaming Launcher'
                 else :
                     sl = 'Steam'
                 data['data'].append({
                     'title': game['title'],
                     'publisher': game['publisher'],
                     'genre': g,
-                    #'hs': hs,
+                    'hs': hs,
                     'fo': fo,
                     'ftp': ftp,
                     'sl': sl,
