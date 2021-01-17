@@ -77,14 +77,17 @@ def parse() :
                         ftp = 'Yes'
                 if game['steamUrl'] == '' :
                     if game['store'] == '' :
+                        sl = 'N/A'
+                        """ TODO : Get the name of the launchers
                         if game['publisher'] == 'Electronic Arts Inc.' :
                             sl = 'Origin'
                         if game['publisher'] == 'NCSOFT' :
-                            sl = 'NCSOFT Launcher'
+                            sl = 'NCSOFT'
                         if game['publisher'] == 'Riot Games' :
                             sl = 'LoL Launcher'
                         if game['publisher'] == 'Gaijin Entertainment' :
-                            sl = 'Wargaming Launcher'
+                            sl = 'Wargaming'
+                        """
                     else :
                         sl = game['store']
                 else :
