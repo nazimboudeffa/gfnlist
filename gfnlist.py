@@ -23,6 +23,7 @@ def menu():
     choice = input("""
                       A: Generate DATA.JSON
                       B: Generate CHANGELOG
+                      C: Generate STEAMLIST.JSON
                       Q: Quit/Log Out
                       Please enter your choice: """)
 
@@ -30,6 +31,8 @@ def menu():
         parse()
     elif choice == "B" or choice =="b":
         changelog()
+    elif choice == "C" or choice =="c":
+        steamlist()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -49,7 +52,20 @@ def changelog():
        data = []
        for line in fp:
            print('<li><span class="badge badge-success">Added</span> ' + line.strip('\n') + '</li>')
-
+def steamlist():
+    with open('gfnpc.json', encoding="utf8") as f :
+            games = json.loads(f.read())
+            data = {}
+            data['data'] = []
+            for game in games :
+                if game['steamUrl'] != '' :
+                    sl = game['steamUrl']
+                    data['data'].append({
+                        'title': game['title'],
+                        'id': sl.replace('https://store.steampowered.com/app/','')
+                    })
+            with open('public/steamlist.json', 'w') as outfile:
+                json.dump(data, outfile)
 def parse() :
     if not os.path.exists('gfnpc.json') :
         fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/locales/gfnpc-en-GB.json', out='gfnpc.json')
