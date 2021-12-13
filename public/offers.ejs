@@ -140,42 +140,27 @@
     </div>
   </nav>
 
-<!--
-  <div class="card-body p-5 center">
-    <a href="https://play.google.com/store/apps/details?id=app.bravostudio.A01FEYSYBSHTXHGMW87WB89YAGM"><img src="images/Google-Play-Icon.png"/></a>
-  </div>
-  <div class="center">
-    <p>GFNSocial Android App is currently in dev, have fun with the v0.0.1-alpha.0 ! <a href="https://nazimboudeffa.medium.com/i-love-nocode-e6a0df60df30">Read more ...</a></p>
-  </div>
--->
-
   <div class="card-body p-5">
     <h4>GeForce NOW Games List</h4>
-    <p>This list contains the latest live GeForce NOW Games.</p>
+    <p>This list contains steam offers GeForce NOW Games.</p>
     <div class="table-responsive">
       <table id="gameslist" class="table table-striped table-bordered" style="width:100%">
         <thead>
           <tr>
             <th>Title</th>
-            <th>Publisher</th>
-            <th>Genre</th>
-            <!-- <th>Highlights Supported?</th> -->
-            <th>Fully Optimised?</th>
-            <th>Free?</th>
-            <th>Library</th>
-            <th>Available</th>
+            <th>Id</th>
+            <th>Initial</th>
+            <th>Actual</th>
+            <th>Discount</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
             <th>title...</th>
-            <th>publisher...</th>
-            <th>genre...</th>
-            <!-- <th>support...</th> -->
-            <th>optimised...</th>
-            <th>free?</th>
-            <th>library..</th>
-            <th>available..</th>
+            <th>id...</th>
+            <th>initial...</th>
+            <th>actual..</th>
+            <th>discount..</th>
           </tr>
         </tfoot>
       </table>
@@ -185,7 +170,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#gameslist').DataTable({
-        "ajax": "data.json",
+        "ajax": "steamoffers-old.json",
         "searching": true,
         "ordering": true,
         "info": true,
@@ -198,19 +183,13 @@
         "columns": [{
           "data": "title"
         }, {
-          "data": "publisher"
+          "data": "id"
         }, {
-          "data": "genre"
-        }, /*{
-          "data": "hs"
-        }, */{
-          "data": "fo"
+          "data": "initial"
         }, {
-          "data": "ftp"
+          "data": "final"
         }, {
-          "data": "sl"
-        }, {
-          "data": "ac"
+          "data": "discount"
         }]
       });
       $('#gameslist tfoot th').each(function() {
@@ -228,29 +207,6 @@
       });
     });
   </script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168064082-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-168064082-1');
-  </script>
-
-  <script>
-    window.axeptioSettings = {
-      clientId: "61605a9e08361d7b8f59335b",
-      cookiesVersion: "gfngames-base",
-    };
-     
-    (function(d, s) {
-      var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-      e.async = true; e.src = "//static.axept.io/sdk.js";
-      t.parentNode.insertBefore(e, t);
-    })(document, "script");
-    </script>
 
 </body>
 

@@ -2,6 +2,8 @@ import wget
 import json
 import os
 import sys
+import requests
+from privkey import key
 
 header = "\
   ___________________                           _______                  \n\
@@ -24,6 +26,8 @@ def menu():
                       A: Generate DATA.JSON
                       B: Generate CHANGELOG
                       C: Generate STEAMLIST.JSON
+                      D: Generate STEAM OFFERS
+                      E: Generate STEAM OFFERS
                       Q: Quit/Log Out
                       Please enter your choice: """)
 
@@ -33,6 +37,10 @@ def menu():
         changelog()
     elif choice == "C" or choice =="c":
         steamlist()
+    elif choice == "D" or choice =="d":
+        steamoffers()
+    elif choice == "E" or choice =="e":
+        steamoneoffer()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -66,6 +74,42 @@ def steamlist():
                     })
             with open('public/steamlist.json', 'w') as outfile:
                 json.dump(data, outfile)
+def steamoffers():
+    with open('public/steamlist.json', encoding="utf8") as f :
+            d = json.loads(f.read())
+            games = d['data']
+            data = {}
+            data['data'] = []
+            for game in games :
+                g = requests.get("http://store.steampowered.com/api/appdetails/?appids="+game['id']+"&key="+key)
+                gamejson = g.json()
+                if gamejson != 'null' : 
+                    if 'data' in gamejson[game['id']] : 
+                        if 'price_overview' in gamejson[game['id']]['data'] :
+                            if gamejson[game['id']]['data']['price_overview']['discount_percent'] != 0 :
+                                print(gamejson[game['id']]['data']['name'] + ':' + str(gamejson[game['id']]['data']['steam_appid']))
+                                print(gamejson[game['id']]['data']['price_overview'])
+                                data['data'].append({
+                                    'title': gamejson[game['id']]['data']['name'],
+                                    'id': gamejson[game['id']]['data']['steam_appid'],
+                                    'initial': gamejson[game['id']]['data']['price_overview']['initial'],
+                                    'final': gamejson[game['id']]['data']['price_overview']['final'],
+                                    'discount': gamejson[game['id']]['data']['price_overview']['discount_percent']
+                                })
+                                with open('public/steamoffers.json', 'w') as outfile:
+                                    json.dump(data, outfile)
+def steamoneoffer():
+    g = requests.get("http://store.steampowered.com/api/appdetails/?appids=1128000")
+    gamejson = g.json()
+    print(gamejson)
+    if gamejson != 'null' : 
+        if 'data' in gamejson['1128000'] : 
+            if 'price_overview' in gamejson['1128000']['data'] :
+                if gamejson['1128000']['data']['price_overview']['discount_percent'] != 0 :
+                    print(gamejson['1128000']['data']['name'] + ':' + str(gamejson['1128000']['data']['steam_appid']))
+                    print(gamejson['1128000']['data']['price_overview'])
+    else :
+        print('null')
 def parse() :
     if not os.path.exists('gfnpc.json') :
         fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/locales/gfnpc-en-GB.json', out='gfnpc.json')
