@@ -27,7 +27,7 @@ def menu():
                       B: Generate CHANGELOG
                       C: Generate STEAMLIST.JSON
                       D: Generate STEAM OFFERS
-                      E: Generate STEAM OFFERS
+                      E: Generate ONE STEAM OFFER
                       Q: Quit/Log Out
                       Please enter your choice: """)
 
