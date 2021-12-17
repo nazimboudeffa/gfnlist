@@ -183,7 +183,10 @@
         "columns": [{
           "data": "title"
         }, {
-          "data": "id"
+          "data": "id",
+          "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+            $(nTd).html("<a href='https://store.steampowered.com/app/"+oData.id+"'>"+oData.id+"</a>");
+          }
         }, {
           "data": "initial"
         }, {
