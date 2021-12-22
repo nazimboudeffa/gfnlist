@@ -4,6 +4,7 @@ import os
 import sys
 import requests
 from privkey import key
+import csv
 
 header = "\
   ___________________                           _______                  \n\
@@ -28,6 +29,7 @@ def menu():
                       C: Generate STEAMLIST.JSON
                       D: Generate STEAM OFFERS
                       E: Generate ONE STEAM OFFER
+                      F: Generate GFN STEAM CSV
                       Q: Quit/Log Out
                       Please enter your choice: """)
 
@@ -41,6 +43,8 @@ def menu():
         steamoffers()
     elif choice == "E" or choice =="e":
         steamoneoffer()
+    elif choice == "F" or choice =="f":
+        gfnsteamcsv()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -110,6 +114,35 @@ def steamoneoffer():
                     print(gamejson['1128000']['data']['price_overview'])
     else :
         print('null')
+def gfnsteamcsv():
+    with open('public/steamlist-forcsv.json', encoding="utf8") as f :
+            d = json.loads(f.read())
+            games = d['data']
+            header = ['id', 'name', 'age', 'free', 'recommendations', 'date']
+            datascience = []
+            total = len(games)
+            count = 0 
+            with open('gfnsteam-temp.csv', 'w', newline ='', encoding='utf8') as csvfile:
+                writer = csv.writer(csvfile)
+                writer.writerow(header)
+                for game in games :
+                    g = requests.get("http://store.steampowered.com/api/appdetails/?appids="+game['id']+"&key="+key)
+                    gamejson = g.json()
+                    if gamejson != 'null' : 
+                        if 'data' in gamejson[game['id']] : 
+                            if 'recommendations' in gamejson[game['id']]['data'] :
+                                print(gamejson[game['id']]['data']['name'] + ':' + str(gamejson[game['id']]['data']['steam_appid']))
+                                print(str(count) + ' / ' + str(total))
+                                datascience = [
+                                    gamejson[game['id']]['data']['steam_appid'],
+                                    gamejson[game['id']]['data']['name'],
+                                    gamejson[game['id']]['data']['required_age'],
+                                    gamejson[game['id']]['data']['is_free'],
+                                    gamejson[game['id']]['data']['recommendations']['total'],
+                                    gamejson[game['id']]['data']['release_date']['date']
+                                ]
+                                writer.writerow(datascience)
+                                count = count + 1
 def parse() :
     if not os.path.exists('gfnpc.json') :
         fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/locales/gfnpc-en-GB.json', out='gfnpc.json')
