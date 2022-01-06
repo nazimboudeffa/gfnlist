@@ -87,21 +87,22 @@ def steamoffers():
             for game in games :
                 g = requests.get("http://store.steampowered.com/api/appdetails/?appids="+game['id']+"&key="+key)
                 gamejson = g.json()
-                if gamejson != 'null' : 
-                    if 'data' in gamejson[game['id']] : 
-                        if 'price_overview' in gamejson[game['id']]['data'] :
-                            if gamejson[game['id']]['data']['price_overview']['discount_percent'] != 0 :
-                                print(gamejson[game['id']]['data']['name'] + ':' + str(gamejson[game['id']]['data']['steam_appid']))
-                                print(gamejson[game['id']]['data']['price_overview'])
-                                data['data'].append({
-                                    'title': gamejson[game['id']]['data']['name'],
-                                    'id': gamejson[game['id']]['data']['steam_appid'],
-                                    'initial': gamejson[game['id']]['data']['price_overview']['initial'],
-                                    'final': gamejson[game['id']]['data']['price_overview']['final'],
-                                    'discount': gamejson[game['id']]['data']['price_overview']['discount_percent']
-                                })
-                                with open('public/steamoffers.json', 'w') as outfile:
-                                    json.dump(data, outfile)
+                print('CHECKING GAME ID :' + str(game['id'])) 
+                if 'data' in gamejson[game['id']] : 
+                    if 'price_overview' in gamejson[game['id']]['data'] :
+                        print('Any chance to get a discount in price overview ...')
+                        if gamejson[game['id']]['data']['price_overview']['discount_percent'] != 0 :
+                            print(gamejson[game['id']]['data']['name'] + ':' + str(gamejson[game['id']]['data']['steam_appid']))
+                            print(gamejson[game['id']]['data']['price_overview'])
+                            data['data'].append({
+                                'title': gamejson[game['id']]['data']['name'],
+                                'id': gamejson[game['id']]['data']['steam_appid'],
+                                'initial': gamejson[game['id']]['data']['price_overview']['initial'],
+                                'final': gamejson[game['id']]['data']['price_overview']['final'],
+                                'discount': gamejson[game['id']]['data']['price_overview']['discount_percent']
+                            })
+                            with open('public/steamoffers.json', 'w') as outfile:
+                                json.dump(data, outfile)
 def steamoneoffer():
     g = requests.get("http://store.steampowered.com/api/appdetails/?appids=1128000")
     gamejson = g.json()
