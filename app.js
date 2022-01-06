@@ -24,6 +24,10 @@ app.get('/offers', function (req, res) {
   res.render('offers')
 })
 
+app.get('/social', function (req, res) {
+  res.render('social')
+})
+
 app.get('/changelog', function (req, res) {
   res.render('changelog')
 })
