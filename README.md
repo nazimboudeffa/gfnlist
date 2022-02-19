@@ -3,7 +3,7 @@
 
 # GeForce Now Games List
 
-This site was made to make the list of the games available on GeForceNow easier to maintain
+This site was made to make the list of the games available on GeForceNow available in a diffrent manner
 
 If you think that [GeForce NOW Game Catalog Status](https://nvidia.custhelp.com/app/answers/detail/a_id/5026) helps you more to play with the games list, use it instead
 
