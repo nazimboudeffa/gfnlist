@@ -143,15 +143,6 @@
     </div>
   </nav>
 
-<!--
-  <div class="card-body p-5 center">
-    <a href="https://play.google.com/store/apps/details?id=app.bravostudio.A01FEYSYBSHTXHGMW87WB89YAGM"><img src="images/Google-Play-Icon.png"/></a>
-  </div>
-  <div class="center">
-    <p>GFNSocial Android App is currently in dev, have fun with the v0.0.1-alpha.0 ! <a href="https://nazimboudeffa.medium.com/i-love-nocode-e6a0df60df30">Read more ...</a></p>
-  </div>
--->
-
   <div class="card-body p-5">
     <h4>GeForce NOW Games List</h4>
     <p>This list contains the latest live GeForce NOW Games.</p>
@@ -160,25 +151,25 @@
         <thead>
           <tr>
             <th>Title</th>
-            <th>Publisher</th>
-            <th>Genre</th>
+            <!-- <th>Publisher</th> -->
+            <!-- <th>Genre</th> -->
             <!-- <th>Highlights Supported?</th> -->
-            <th>Fully Optimised?</th>
-            <th>Free?</th>
-            <th>Library</th>
-            <th>Available</th>
+            <!-- <th>Fully Optimised?</th> -->
+            <!-- <th>Free?</th> -->
+            <th>Store</th>
+            <!-- <th>Available</th> -->
           </tr>
         </thead>
         <tfoot>
           <tr>
             <th>title...</th>
-            <th>publisher...</th>
-            <th>genre...</th>
+            <!-- <th>publisher...</th> -->
+            <!-- <th>genre...</th> -->
             <!-- <th>support...</th> -->
-            <th>optimised...</th>
-            <th>free?</th>
-            <th>library..</th>
-            <th>available..</th>
+            <!-- <th>optimised...</th> -->
+            <!-- <th>free?</th> -->
+            <th>store..</th>
+            <!-- <th>available..</th> -->
           </tr>
         </tfoot>
       </table>
@@ -200,21 +191,26 @@
         "dom": 'lrtip',
         "columns": [{
           "data": "title"
-        }, {
-          "data": "publisher"
-        }, {
-          "data": "genre"
         }, /*{
+          "data": "publisher"
+        }, */
+          /*{
+          "data": "genre"
+        }, */ 
+          /*{
           "data": "hs"
-        }, */{
+        }, */
+          /*{
           "data": "fo"
-        }, {
+        }, */
+          /*{
           "data": "ftp"
-        }, {
-          "data": "sl"
-        }, {
+        }, */{
+          "data": "store"
+        } /*, {
           "data": "ac"
-        }]
+        } */
+        ]
       });
       $('#gameslist tfoot th').each(function() {
         var title = $(this).text();
@@ -241,6 +237,19 @@
 
     gtag('config', 'UA-168064082-1');
   </script>
+
+  <script>
+    window.axeptioSettings = {
+      clientId: "61605a9e08361d7b8f59335b",
+      cookiesVersion: "gfngames-base",
+    };
+     
+    (function(d, s) {
+      var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+      e.async = true; e.src = "//static.axept.io/sdk.js";
+      t.parentNode.insertBefore(e, t);
+    })(document, "script");
+    </script>
 
 </body>
 

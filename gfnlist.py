@@ -146,7 +146,7 @@ def gfnsteamcsv():
                                 count = count + 1
 def parse() :
     if not os.path.exists('gfnpc.json') :
-        fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/locales/gfnpc-en-GB.json', out='gfnpc.json')
+        fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/locales/gfnpc-en-US.json', out='gfnpc.json')
         with open('gfnpc.json', encoding="utf8") as f :
             games = json.loads(f.read())
     else :
