@@ -33,90 +33,93 @@
   <link rel="stylesheet" type="text/css" href="vendor/datatables.min.css" />
   <script src="vendor/datatables.min.js"></script>
 
-  <style media="screen">
 
-    html,
-    body {
-      height: 100%;
-      font-family: geforcenow !important; 
-    }
-  
-    li {
-      list-style-type: none;
-      display: inline;
-    }
-  
-    img {
-      width: 250px;
-    }
-  
-    .navbar-dark .navbar-brand {
-      font-family: 'geforce-bold' !important;
-      color: white;
-      text-transform: uppercase;
-    }
-  
-    li.nav-item {
-      text-transform: uppercase;
-      font-family: geforce-bold;
-    }
-  
-    td.sorting_1 {
-      font-weight: 600;
-    }
-  
-    .p-5 {
-      padding: 0.5rem !important;
-    }
-  
-    .center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .bg-dark {
-      background-color: #76b900 !important;
-    }
-  
-    thead {
-      text-transform: uppercase;
-      color: #76b900 !important;
-      font-family: geforce-bold;
-    }
-  
-    tfoot {
-      display: table-header-group;
-    }
-  
-    /* Other Classes for Page Styling */
-  
-    @font-face {
-      font-family: "geforcenow";
-      src: url("fonts/geforce-light.ttf") format("truetype");
-    }
-  
-    @font-face {
-      font-family: "geforce-bold";
-      src: url("fonts/geforce-bold.ttf") format("truetype");
-    }
-  
-    .nav-pills .nav-link.active,
-    .nav-pills .show>.nav-link {
-      color: #fff;
-      font-weight: bold;
-      margin-left: 5px;
-      text-transform: uppercase;
-      background-color: #76b900;
-    }
-  
-    .upcase {
-      text-transform: uppercase;
-    }
-  </style>
 </head>
 
 <body>
+
+<style media="screen">
+
+  html,
+  body {
+    height: 100%;
+    font-family: geforcenow;
+     !important
+  }
+
+  li {
+    list-style-type: none;
+    display: inline;
+  }
+
+  img {
+    width: 250px;
+  }
+
+  .navbar-dark .navbar-brand {
+    font-family: 'geforce-bold' !important;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  li.nav-item {
+    text-transform: uppercase;
+    font-family: geforce-bold;
+  }
+
+  td.sorting_1 {
+    font-weight: 600;
+  }
+
+  .p-5 {
+    padding: 0.5rem !important;
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg-dark {
+    background-color: #76b900 !important;
+  }
+
+  thead {
+    text-transform: uppercase;
+    color: #76b900 !important;
+    font-family: geforce-bold;
+  }
+
+  tfoot {
+    display: table-header-group;
+  }
+
+  /* Other Classes for Page Styling */
+
+  @font-face {
+    font-family: "geforcenow";
+    src: url("fonts/geforce-light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "geforce-bold";
+    src: url("fonts/geforce-bold.ttf") format("truetype");
+  }
+
+  .nav-pills .nav-link.active,
+  .nav-pills .show>.nav-link {
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5px;
+    text-transform: uppercase;
+    background-color: #76b900;
+  }
+
+  .upcase {
+    text-transform: uppercase;
+  }
+</style>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <a class="navbar-brand" href="/">GeForce NOW Games List</a>
@@ -137,37 +140,33 @@
         <li class="nav-item">
           <a class="nav-link" href="/info">NFO</a>
         </li>
-      </ul>
     </div>
   </nav>
 
+<!--
+  <div class="card-body p-5 center">
+    <a href="https://play.google.com/store/apps/details?id=app.bravostudio.A01FEYSYBSHTXHGMW87WB89YAGM"><img src="images/Google-Play-Icon.png"/></a>
+  </div>
+  <div class="center">
+    <p>GFNSocial Android App is currently in dev, have fun with the v0.0.1-alpha.0 ! <a href="https://nazimboudeffa.medium.com/i-love-nocode-e6a0df60df30">Read more ...</a></p>
+  </div>
+-->
+
   <div class="card-body p-5">
     <h4>GeForce NOW Games List</h4>
-    <p>This list contains the latest live GeForce NOW Games with our partner <a href="https://cloudchoice.org">https://cloudchoice.org</a></p>
+    <p>This list contains the latest live GeForce NOW Games.</p>
     <div class="table-responsive">
-      <table id="gameslist" class="table table-striped table-bordered" style="width:100%">
+      <table id="gameslist" class="table table-striped table-bordered display responsive nowrap" style="width:100%">
         <thead>
           <tr>
             <th>Title</th>
-            <!-- <th>Publisher</th> -->
-            <!-- <th>Genre</th> -->
-            <!-- <th>Highlights Supported?</th> -->
-            <!-- <th>Fully Optimised?</th> -->
-            <!-- <th>Free?</th> -->
-            <th>Store</th>
-            <!-- <th>Available</th> -->
+            <th>Library</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
             <th>title...</th>
-            <!-- <th>publisher...</th> -->
-            <!-- <th>genre...</th> -->
-            <!-- <th>support...</th> -->
-            <!-- <th>optimised...</th> -->
-            <!-- <th>free?</th> -->
-            <th>store..</th>
-            <!-- <th>available..</th> -->
+            <th>library..</th>
           </tr>
         </tfoot>
       </table>
@@ -178,6 +177,7 @@
     $(document).ready(function() {
       $('#gameslist').DataTable({
         "ajax": "data.json",
+        "responsive":true,
         "searching": true,
         "ordering": true,
         "info": true,
@@ -189,26 +189,9 @@
         "dom": 'lrtip',
         "columns": [{
           "data": "title"
-        }, /*{
-          "data": "publisher"
-        }, */
-          /*{
-          "data": "genre"
-        }, */ 
-          /*{
-          "data": "hs"
-        }, */
-          /*{
-          "data": "fo"
-        }, */
-          /*{
-          "data": "ftp"
-        }, */{
+        }, {
           "data": "store"
-        } /*, {
-          "data": "ac"
-        } */
-        ]
+        }]
       });
       $('#gameslist tfoot th').each(function() {
         var title = $(this).text();
@@ -235,19 +218,6 @@
 
     gtag('config', 'UA-168064082-1');
   </script>
-
-  <script>
-    window.axeptioSettings = {
-      clientId: "61605a9e08361d7b8f59335b",
-      cookiesVersion: "gfngames-base",
-    };
-     
-    (function(d, s) {
-      var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-      e.async = true; e.src = "//static.axept.io/sdk.js";
-      t.parentNode.insertBefore(e, t);
-    })(document, "script");
-    </script>
 
 </body>
 

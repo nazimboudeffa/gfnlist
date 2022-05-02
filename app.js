@@ -14,11 +14,10 @@ app.get('/', function (req, res) {
   res.render('index')
 })
 
-/*
+
 app.get('/list', function (req, res) {
   res.render('list')
 })
-*/
 
 app.get('/offers', function (req, res) {
   res.render('offers')
