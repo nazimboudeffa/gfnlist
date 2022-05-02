@@ -37,138 +37,22 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
 
+  <link rel="stylesheet" href="vendor/css/style.css">
+
 </head>
 
 <body>
 
-<style media="screen">
+  <%- include("partials/header.ejs") %>  
 
-  @font-face {
-    font-family: "geforcenow";
-    src: url("fonts/geforce-light.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "geforce-bold";
-    src: url("fonts/geforce-bold.ttf") format("truetype");
-  }
-
-  body {
-    font-family: geforcenow;
-  }
-
-  li {
-    list-style-type: none;
-    display: inline;
-  }
-
-  img {
-    width: 250px;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  a:hover {
-    text-decoration: none;
-    color: white;
-  }
-
-  .menu {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    background-color: #76b900;
-    color: white;
-    width:100%;
-    text-transform: uppercase;
-    font-family: 'geforce-bold';
-  }
-
-  .logo {
-    margin-left: 20px;
-  }
-
-  ul {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:24px;
-    list-style:none;
-    cursor:pointer;
-    margin-top: 15px;
-  }
-
-  thead {
-    text-transform: uppercase;
-    color: #76b900 !important;
-    font-family: geforce-bold;
-  }
-
-  .custom-control {
-    margin-left: 20px;
-  }
-
-  #darkSwitch {
-    cursor: pointer;
-  }
-
-  @media only screen and (max-width: 600px) {
-    .custom-control {
-      margin-left: 30px;
-    }
-  }
-  
-  [data-theme="dark"] {
-    background-color: #262626 !important;
-    color: #eee;
-  }
-
-  [data-theme="dark"] table {
-    color: #eee;
-  }
-</style>
-
-  <header>
-    <nav>
-      <div class="menu">
-        <div class="logo">
-          <a href="/">GeForce NOW Games List</a>
-        </div>
-        <ul>
-          <li>
-            <a href="/offers">Offers</a>
-          </li>
-          <li>
-            <a href="/social">Social</a>
-          </li>
-          <li>
-            <a href="/changelog">Changelog</a>
-          </li>
-          <li>
-            <a href="/info">NFO</a>
-          </li>
-        </ul>
-        <div class="custom-control custom-switch text-lg-right text-center py-2  px-lg-2">
-          <input type="checkbox" class="custom-control-input" id="darkSwitch">
-          <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-<!--
-  <div class="card-body p-5 center">
-    <a href="https://play.google.com/store/apps/details?id=app.bravostudio.A01FEYSYBSHTXHGMW87WB89YAGM"><img src="images/Google-Play-Icon.png"/></a>
-  </div>
-  <div class="center">
-    <p>GFNSocial Android App is currently in dev, have fun with the v0.0.1-alpha.0 ! <a href="https://nazimboudeffa.medium.com/i-love-nocode-e6a0df60df30">Read more ...</a></p>
-  </div>
--->
+  <!--
+    <div class="card-body p-5 center">
+      <a href="https://play.google.com/store/apps/details?id=app.bravostudio.A01FEYSYBSHTXHGMW87WB89YAGM"><img src="images/Google-Play-Icon.png"/></a>
+    </div>
+    <div class="center">
+      <p>GFNSocial Android App is currently in dev, have fun with the v0.0.1-alpha.0 ! <a href="https://nazimboudeffa.medium.com/i-love-nocode-e6a0df60df30">Read more ...</a></p>
+    </div>
+  -->
 
   <main class="card-body p-5">
     <h4>GeForce NOW Games List</h4>
@@ -189,7 +73,7 @@
         "ajax": "data.json",
         "responsive":true,
         "searching": true,
-        "pageLength": 25,
+        "pageLength": 10,
         /*
         "ordering": true,
         "info": true,
@@ -207,6 +91,7 @@
       });
     });
   </script>
+  
   <script src="vendor/dark-mode-switch.min.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168064082-1"></script>
