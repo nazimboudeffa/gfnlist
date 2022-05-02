@@ -184,9 +184,9 @@
       $('#gameslist thead th').each(function() {
         var title = $(this).text();
         console.log(this);
-        $(this).html('<th>Title</th><th></th>');
-        $(this).html('<th>Library</th><th></th>');
         $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+        $(this).html('<th>Title</th>');
+        $(this).html('<th>Library</th>');
       });
       $('#gameslist').DataTable({
         "ajax": "data.json",
