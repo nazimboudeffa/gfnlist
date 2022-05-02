@@ -3,211 +3,44 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <meta name="description" content="A list of all available games Nvidia GeForce NOW has to offer.">
-  <meta name="author" content="Josh Pavey, Nazim Boudeffa">
-
-  <meta property="og:url" content="index.html" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="GeForce NOW Games List" />
-  <meta property="og:description" content="A list of all available games GeForce NOW has to offer." />
-  <meta property="og:image" content="geforcenow.jpg" />
-
-  <meta name="twitter:card" content="">
-  <meta name="twitter:site" content="GeForce NOW Games List">
-  <meta name="twitter:creator" content="@NVIDIAGFN">
-  <meta name="twitter:title" content="GeForce NOW Games List">
-  <meta name="twitter:url" content="https://www.gfngames.com">
-  <meta name="twitter:description" content="A list of all available games GeForce NOW has to offer.">
-  <meta name="twitter:image" content="geforcenow.jpg">
-
-  <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-
-  <title>GeForce NOW Games List | Home</title>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="vendor/datatables.min.css" />
-  <script src="vendor/datatables.min.js"></script>
-
+  <%- include("partials/head.ejs") %>
 
 </head>
 
 <body>
 
-<style media="screen">
+  <%- include("partials/header.ejs") %>  
 
-  html,
-  body {
-    height: 100%;
-    font-family: geforcenow;
-     !important
-  }
-
-  li {
-    list-style-type: none;
-    display: inline;
-  }
-
-  img {
-    width: 250px;
-  }
-
-  .navbar-dark .navbar-brand {
-    font-family: 'geforce-bold' !important;
-    color: white;
-    text-transform: uppercase;
-  }
-
-  li.nav-item {
-    text-transform: uppercase;
-    font-family: geforce-bold;
-  }
-
-  td.sorting_1 {
-    font-weight: 600;
-  }
-
-  .p-5 {
-    padding: 0.5rem !important;
-  }
-
-  .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .bg-dark {
-    background-color: #76b900 !important;
-  }
-
-  thead {
-    text-transform: uppercase;
-    color: #76b900 !important;
-    font-family: geforce-bold;
-  }
-
-  tfoot {
-    display: table-header-group;
-  }
-
-  /* Other Classes for Page Styling */
-
-  @font-face {
-    font-family: "geforcenow";
-    src: url("fonts/geforce-light.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "geforce-bold";
-    src: url("fonts/geforce-bold.ttf") format("truetype");
-  }
-
-  .nav-pills .nav-link.active,
-  .nav-pills .show>.nav-link {
-    color: #fff;
-    font-weight: bold;
-    margin-left: 5px;
-    text-transform: uppercase;
-    background-color: #76b900;
-  }
-
-  .upcase {
-    text-transform: uppercase;
-  }
-</style>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <a class="navbar-brand" href="/">GeForce NOW Games List</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="/offers">Offers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/social">Social</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/changelog">Changelog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/info">NFO</a>
-        </li>
-    </div>
-  </nav>
-
-<!--
-  <div class="card-body p-5 center">
-    <a href="https://play.google.com/store/apps/details?id=app.bravostudio.A01FEYSYBSHTXHGMW87WB89YAGM"><img src="images/Google-Play-Icon.png"/></a>
-  </div>
-  <div class="center">
-    <p>GFNSocial Android App is currently in dev, have fun with the v0.0.1-alpha.0 ! <a href="https://nazimboudeffa.medium.com/i-love-nocode-e6a0df60df30">Read more ...</a></p>
-  </div>
--->
-
-  <div class="card-body p-5">
+  <main class="card-body p-5">
     <h4>GeForce NOW Games List</h4>
     <p>This list contains the latest live GeForce NOW Games.</p>
-    <div class="table-responsive">
-      <table id="gameslist" class="table table-striped table-bordered display responsive nowrap" style="width:100%">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Library</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <th>title...</th>
-            <th>library..</th>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-  </div>
+    <table id="gameslist" class="table table-striped table-bordered display responsive" style="width:100%">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Store</th>
+        </tr>
+      </thead>
+    </table>
+  </main>
 
   <script type="text/javascript">
     $(document).ready(function() {
       $('#gameslist').DataTable({
-        "ajax": "data.json",
+        "ajax": "data/data.json",
         "responsive":true,
         "searching": true,
-        "ordering": true,
-        "info": true,
-        "blengthchange": true,
-        "lengthChange": false,
-        "paging": true,
-        "pageLength": 50,
-        "pagingType": "full_numbers",
-        "dom": 'lrtip',
+        "pageLength": 10,
         "columns": [{
           "data": "title"
         }, {
           "data": "store"
         }]
       });
-      $('#gameslist tfoot th').each(function() {
-        var title = $(this).text();
-        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
-      });
-      var table = $('#gameslist').DataTable();
-      table.columns().every(function() {
-        var that = this;
-        $('input', this.footer()).on('keyup change clear', function() {
-          if (that.search() !== this.value) {
-            that.search(this.value).draw();
-          }
-        });
-      });
     });
   </script>
+
+  <script src="vendor/dark-mode-switch.min.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168064082-1"></script>
