@@ -163,57 +163,37 @@
   <main class="card-body p-5">
     <h4>GeForce NOW Games List</h4>
     <p>This list contains the latest live GeForce NOW Games.</p>
-    <table id="gameslist" class="table table-striped table-bordered display responsive" style="width:100%">
+    <table id="gameslist" class="table table-striped table-bordered display responsive nowrap" style="width:100%">
       <thead>
-        <tr class="titles1">
+        <tr>
           <th>Title</th>
           <th>Library</th>
         </tr>
       </thead>
-      <tfoot>
-        <tr class="titles2">
-          <!-- <th>title...</th>
-          <th>library..</th> -->
-        </tr>
-      </tfoot>
     </table>
   </main>
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#gameslist thead tr').each(function() {
-        var title = $(this).text();
-        console.log(this);
-        $(this).html('<input type="text" placeholder="Search ' + title + '" /><th>Title</th>');
-        // $(this).html('<th>Title</th>');
-        // $(this).html('<th>Library</th>');
-      });
       $('#gameslist').DataTable({
         "ajax": "data.json",
         "responsive":true,
         "searching": true,
+        "pageLength": 25,
+        /*
         "ordering": true,
         "info": true,
         "blengthchange": true,
         "lengthChange": false,
         "paging": true,
-        "pageLength": 50,
         "pagingType": "full_numbers",
         "dom": 'lrtip',
+        */
         "columns": [{
           "data": "title"
         }, {
           "data": "store"
         }]
-      });
-      var table = $('#gameslist').DataTable();
-      table.columns().every(function() {
-        var that = this;
-        $('input', this.footer()).on('keyup change clear', function() {
-          if (that.search() !== this.value) {
-            that.search(this.value).draw();
-          }
-        });
       });
     });
   </script>
