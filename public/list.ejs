@@ -181,7 +181,7 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#gameslist thead th').each(function() {
+      $('#gameslist thead tr').each(function() {
         var title = $(this).text();
         console.log(this);
         $(this).html('<input type="text" placeholder="Search ' + title + '" /><th>Title</th>');
