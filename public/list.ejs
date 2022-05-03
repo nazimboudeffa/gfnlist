@@ -26,15 +26,30 @@
     <table id="gameslist" class="table table-striped table-bordered display responsive" style="width:100%">
       <thead>
         <tr>
-          <th>Title</th>
-          <th>Store</th>
+          <th data-priority="1" style="width:60%">Title</th>
+          <th data-priority="2" style="width:30%">Store</th>
         </tr>
       </thead>
+      <!--
+      <thead class="filters">
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      -->
+      <tbody></tbody>
     </table>
   </main>
 
   <script type="text/javascript">
     $(document).ready(function() {
+      /*
+      $('#gameslist .filters th').each( function () {
+        var title = $('#gameslist thead th').eq( $(this).index() ).text();
+        $(this).html('<input type="text" placeholder="Search ' + title + '"/>');
+      });
+      */
       $('#gameslist').DataTable({
         "ajax": "data/data.json",
         "responsive":true,
@@ -49,12 +64,35 @@
         "pagingType": "full_numbers",
         "dom": 'lrtip',
         */
+        columnDefs: [
+          { responsivePriority: 1, targets: 0 },
+          { responsivePriority: 2, targets: 1 }
+        ],
         "columns": [{
           "data": "title"
         }, {
           "data": "store"
         }]
       });
+      /*
+			table.columns().eq(0).each(function (colIdx) {
+				$('input', $('.filters th')[colIdx] ).on('keyup change', function () {
+					table
+						.column(colIdx)
+						.search(this.value)
+						.draw();
+				});
+			});
+      var table = $('#gameslist').DataTable();
+      table.columns().every(function() {
+        var that = this;
+        $('input', this.footer()).on('keyup change clear', function() {
+          if (that.search() !== this.value) {
+            that.search(this.value).draw();
+          }
+        });
+      });
+      */
     });
   </script>
   
