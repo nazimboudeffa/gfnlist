@@ -19,7 +19,7 @@
         <thead>
           <tr>
             <th>Title</th>
-            <th>Id</th>
+            <!--<th>Id</th>-->
             <th>Initial</th>
             <th>Actual</th>
             <th>Discount</th>
@@ -41,9 +41,9 @@
           "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
             $(nTd).html("<a href='https://store.steampowered.com/app/"+oData.id+"'>"+oData.title+"</a>");
           }
-        }, {
+        },/* {
           "data": "id"
-        }, {
+        },*/ {
           "data": "initial"
         }, {
           "data": "final"
