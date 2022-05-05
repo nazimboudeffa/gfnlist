@@ -37,12 +37,12 @@
         "searching": true,
         "pageLength": 10,
         "columns": [{
-          "data": "title"
-        }, {
-          "data": "id",
+          "data": "title",
           "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-            $(nTd).html("<a href='https://store.steampowered.com/app/"+oData.id+"'>"+oData.id+"</a>");
+            $(nTd).html("<a href='https://store.steampowered.com/app/"+oData.id+"'>"+oData.title+"</a>");
           }
+        }, {
+          "data": "id"
         }, {
           "data": "initial"
         }, {
