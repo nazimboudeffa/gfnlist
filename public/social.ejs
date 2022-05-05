@@ -20,12 +20,12 @@
         <thead>
           <tr>
             <!-- <th>GFN Id</th> -->
-            <th>Title</th>
-            <th>Site</th>
-            <th>Twitter</th>
-            <th>Facebook</th>
-            <th>Twitch</th>
-            <th>Youtube</th>
+            <th data-priority="1" style="width:25%">Title</th>
+            <th data-priority="2"style="width:15%">Site</th>
+            <th data-priority="3" style="width:15%">Twitter</th>
+            <th data-priority="4" style="width:15%">Facebook</th>
+            <th data-priority="5" style="width:15%">Twitch</th>
+            <th data-priority="6" style="width:15%">Youtube</th>
           </tr>
         </thead>
       </table>
@@ -39,6 +39,13 @@
         "responsive":true,
         "searching": true,
         "pageLength": 10,
+        columnDefs: [
+          { responsivePriority: 1, targets: 0 },
+          { responsivePriority: 2, targets: 1 },
+          { responsivePriority: 3, targets: 2 },
+          { responsivePriority: 4, targets: 3 },
+          { responsivePriority: 5, targets: 4 },
+        ],
         "columns": [/*{
           "data": "ID"
         }, */{
