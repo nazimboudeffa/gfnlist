@@ -8,7 +8,7 @@ img {
 width: 250px;
 }
 
-.menu {
+.navigation {
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -19,26 +19,26 @@ width:100%;
 text-transform: uppercase;
 }
 
-.logo {
+.mylogo {
 margin-left: 20px;
 }
 
-.logo a {
+.mylogo a {
 text-decoration: none;
 color: white;
 }
 
-.sous-menu a {
+.mymenu a {
 text-decoration: none;
 color: white;
 }
 
-.sous-menu a:hover {
+.mymenu a:hover {
 text-decoration: none;
 color: white;
 }
 
-.sous-menu {
+.mymenu {
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -47,6 +47,26 @@ gap:24px;
 list-style:none;
 cursor:pointer;
 margin-top: 15px;
+}
+
+.mymenu li:hover .mysubmenu > li {
+display: block;
+background-color: #76b900;
+}
+ 
+.mysubmenu {
+display: flex;
+flex-direction: column;
+position: absolute;
+}
+
+.mysubmenu li {
+display: none;
+}
+
+.navbar {
+    text-transform: uppercase;
+    background-color: #76b900;
 }
 
 thead {
@@ -67,7 +87,7 @@ cursor: pointer;
 .custom-control {
     margin-left: 30px;
 }
-.logo {
+.mylogo {
 margin-left: 30px;
 margin-top: 10px;
 }
