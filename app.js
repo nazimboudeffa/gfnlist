@@ -11,9 +11,8 @@ app.set('views', path.join(__dirname, '/public'))
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('list')
 })
-
 
 app.get('/list', function (req, res) {
   res.render('list')
