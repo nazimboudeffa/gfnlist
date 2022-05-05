@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <%- include("partials/head.ejs") %>
+
+</head>
+
+<body>
+
+  <%- include("partials/header.ejs") %>  
+
+  <div class="card-body p-5">
+    <h4>INSTANT GAMING OFFERS</h4>
+    <p>LAST UPDATE 05 MAY 2022 IN EUR</p>
+    <div class="table-responsive">
+      <table id="gameslist" class="table table-striped table-bordered display responsive" style="width:100%">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Launcher</th>
+            <th>Actual</th>
+            <th>Discount</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#gameslist').DataTable({
+        "ajax": "data/ig.json",
+        "responsive":true,
+        "searching": true,
+        "pageLength": 10,
+        "columns": [{
+          "data": "title",
+          "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+            $(nTd).html("<a href='"+oData.url+"?igr=gfngames"+"'>"+oData.title+"</a>");
+          }
+        }, {
+          "data": "store"
+        }, {
+          "data": "price"
+        }, {
+          "data": "discount"
+        }]
+      });
+    });
+  </script>
+
+  <script src="vendor/dark-mode-switch.min.js"></script>
+
+  <%- include("partials/analytics.ejs") %>
+
+</body>
+
+</html>
