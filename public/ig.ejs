@@ -19,6 +19,7 @@
         <thead>
           <tr>
             <th>Title</th>
+            <th>Link</th>
             <th>Launcher</th>
             <th>Actual</th>
             <th>Discount</th>
@@ -36,9 +37,11 @@
         "searching": true,
         "pageLength": 10,
         "columns": [{
-          "data": "title",
+          "data": "title"
+        }, {
+          "defaultContent": "buy",
           "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-            $(nTd).html("<a href='"+oData.url+"?igr=gfngames"+"'>"+oData.title+"</a>");
+            $(nTd).html("<a href='"+oData.url+"?igr=gfngames"+"'>"+/*oData.title*/"buy?"+"</a>");
           }
         }, {
           "data": "store"

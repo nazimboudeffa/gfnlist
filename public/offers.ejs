@@ -20,6 +20,7 @@
           <tr>
             <th>Title</th>
             <!--<th>Id</th>-->
+            <th>Link</th>
             <th>Initial</th>
             <th>Actual</th>
             <th>Discount</th>
@@ -37,13 +38,15 @@
         "searching": true,
         "pageLength": 10,
         "columns": [{
-          "data": "title",
-          "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-            $(nTd).html("<a href='https://store.steampowered.com/app/"+oData.id+"'>"+oData.title+"</a>");
-          }
+          "data": "title"
         },/* {
           "data": "id"
         },*/ {
+          "defaultContent": "buy",
+          "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+            $(nTd).html("<a href='https://store.steampowered.com/app/"+oData.id+"'>"+/*oData.title*/"buy?"+"</a>");
+          }
+        },{
           "data": "initial"
         }, {
           "data": "final"
