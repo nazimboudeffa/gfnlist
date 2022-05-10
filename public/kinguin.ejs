@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <%- include("partials/head.ejs") %>
+
+</head>
+
+<body>
+
+  <%- include("partials/header.ejs") %>  
+
+  <!--
+    <div class="card-body p-5 center">
+      <a href="https://play.google.com/store/apps/details?id=app.bravostudio.A01FEYSYBSHTXHGMW87WB89YAGM"><img src="images/Google-Play-Icon.png"/></a>
+    </div>
+    <div class="center">
+      <p>GFNSocial Android App is currently in dev, have fun with the v0.0.1-alpha.0 ! <a href="https://nazimboudeffa.medium.com/i-love-nocode-e6a0df60df30">Read more ...</a></p>
+    </div>
+  -->
+
+  <main class="card-body p-5">
+    <h4>GeForce NOW Games List</h4>
+    <p>This list contains the latest live GeForce NOW Games.</p>
+    <table id="gameslist" class="table table-striped table-bordered display responsive" style="width:100%">
+      <thead>
+        <tr>
+          <th data-priority="1" style="width:60%">Title</th>
+          <th data-priority="2" style="width:30%">Link</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#gameslist').DataTable({
+        "ajax": "data/data.json",
+        "responsive":true,
+        "searching": true,
+        "pageLength": 10,
+        columnDefs: [
+          { responsivePriority: 1, targets: 0 },
+          { responsivePriority: 2, targets: 1 }
+        ],
+        "columns": [{
+          "data": "title"
+        }, {
+          "defaultContent": "buy",
+          "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+            $(nTd).html("<a href='/kinguin/"+encodeURI(oData.title)+"'>"+"buy?"+"</a>");
+          }
+        }]
+      });
+    });
+  </script>
+  
+  <script src="vendor/dark-mode-switch.min.js"></script>
+
+  <%- include("partials/analytics.ejs") %>
+
+</body>
+
+</html>

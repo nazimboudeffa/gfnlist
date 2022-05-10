@@ -4,10 +4,10 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"

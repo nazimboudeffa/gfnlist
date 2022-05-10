@@ -2,3 +2,4 @@
 privkey.py
 /__pycache__
 /public/data
+.env
