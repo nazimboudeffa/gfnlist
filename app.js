@@ -59,8 +59,7 @@ app.get('/kinguin/:title', async function (req, res) {
         'api-ecommerce-auth': process.env.KINGUIN_API_KEY
       }
     })
-    //res.json(response.data);
-    res.render('kinguin-offers', { offers : response.data["results"] })
+    res.render('kinguin-offers', { title : decodeURI(req.params.title), offers : response.data["results"] })
 })
 
 app.get('/social', function (req, res) {
