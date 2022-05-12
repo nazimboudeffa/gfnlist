@@ -64,6 +64,7 @@
         <thead>
           <tr>
             <th>Title</th>
+            <th>Platform</th>
             <th>Quantity</th>
             <th>Price</th>
             <th>Link</th>
@@ -72,6 +73,7 @@
         <% offers.forEach((offer, index) => {%>
           <tr>
             <td><%= offer.name %></td>
+            <td><%= offer.platform %></td>
             <td><%= offer.qty %></td>
             <td><%= offer.price %></td>
             <td><a href="https://www.kinguin.net/?r=gfngames">buy?</a></td>
