@@ -4,15 +4,19 @@ const app = express()
 const ejs = require('ejs')
 const path = require('path')
 // const kinguin = require('kinguin-api-es5')
-// require('dotenv').config();
+require('dotenv').config();
+const axios = require('axios');
+const https = require('https');
+
+const agent = new https.Agent({
+  rejectUnauthorized: false
+});
 
 // set the view engine to ejs
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/public'))
 
 app.use(express.static('public'));
-
-var king = new kinguin(process.env.KINGUIN_API_KEY, true, 'v1');
 
 app.get('/', function (req, res) {
   res.render('list')
@@ -30,13 +34,21 @@ app.get('/ig', function (req, res) {
   res.render('ig')
 })
 
-// app.get('/kinguin', function (req, res) {
-//   res.render('kinguin')
-// })
+app.get('/kinguin', function (req, res) {
+  res.render('kinguin')
+})
 
-// app.get('/kinguin/:title', function (req, res) {
-//   res.json(king.getProductByName(decodeURI(req.params.title)))
-// })
+app.get('/kinguin/:title', async function (req, res) {
+  const response = await axios.get ('https://gateway.kinguin.net/esa/api/v1'+'/products?name=' + decodeURI(req.params.title),
+    {
+      httpsAgent: agent,
+      headers: {
+        'Accept': 'application/json',
+        'api-ecommerce-auth': process.env.KINGUIN_API_KEY
+      }
+    })
+    res.json(response.data);
+})
 
 app.get('/social', function (req, res) {
   res.render('social')
