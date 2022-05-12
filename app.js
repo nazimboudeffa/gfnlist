@@ -38,7 +38,7 @@ app.get('/kinguin', function (req, res) {
   res.render('kinguin')
 })
 
-app.get('/kinguin/:title', async function (req, res) {
+app.get('/kinguindebug/:title', async function (req, res) {
   const response = await axios.get ('https://gateway.kinguin.net/esa/api/v1'+'/products?name=' + decodeURI(req.params.title),
     {
       httpsAgent: agent,
@@ -48,6 +48,19 @@ app.get('/kinguin/:title', async function (req, res) {
       }
     })
     res.json(response.data);
+})
+
+app.get('/kinguin/:title', async function (req, res) {
+  const response = await axios.get ('https://gateway.kinguin.net/esa/api/v1'+'/products?name=' + decodeURI(req.params.title),
+    {
+      httpsAgent: agent,
+      headers: {
+        'Accept': 'application/json',
+        'api-ecommerce-auth': process.env.KINGUIN_API_KEY
+      }
+    })
+    //res.json(response.data);
+    res.render('kinguin-offers', { offers : response.data["results"] })
 })
 
 app.get('/social', function (req, res) {
