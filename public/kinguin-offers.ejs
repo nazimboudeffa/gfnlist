@@ -64,20 +64,20 @@
         <thead>
           <tr>
             <th>Title</th>
+            <th>Link</th>
             <th>Platform</th>
             <th>Quantity</th>
             <th>Price</th>
-            <th>Link</th>
           </tr>
         </thead>
         <% offers.forEach((offer, index) => { %>
           <% if ((offer.platform == 'Steam') || (offer.platform == 'Uplay') || (offer.platform == 'Epic Games') || (offer.platform == 'GOG COM') || (offer.platform == 'EA Origin') || (offer.platform == 'NCSoft')) { %>
             <tr>
               <td><%= offer.name %></td>
+              <td><a href="https://www.kinguin.net/category/<%= offer.kinguinId %>?r=gfngames" target="_blank">Buy on Kinguin</a></td>
               <td><%= offer.platform %></td>
               <td><%= offer.qty %></td>
               <td><%= offer.price %></td>
-              <td><a href="https://www.kinguin.net/category/<%= offer.kinguinId %>?r=gfngames" target="_blank">Buy on Kinguin</a></td>
             </tr>
           <% } %>
         <% }); %>
