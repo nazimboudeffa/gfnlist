@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, '/public'))
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.render('list')
+  res.render('index')
 })
 
 app.get('/list', function (req, res) {
@@ -36,6 +36,10 @@ app.get('/ig', function (req, res) {
 
 app.get('/kinguin', function (req, res) {
   res.render('kinguin')
+})
+
+app.get('/test', function (req, res) {
+  res.render('test')
 })
 
 app.get('/kinguindebug/:title', async function (req, res) {
