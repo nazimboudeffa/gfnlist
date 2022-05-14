@@ -9,13 +9,102 @@
 
 <body>
 
+  <style>
+    html{
+      background: url('vendor/images/ahmed-atef-9SdZxvkGnZM-unsplash.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    back{
+      height: 200px;
+    }
+
+    main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      margin-top: 50px;
+      position: sticky;
+    }
+
+    main h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    main h4{
+        margin-top: -20px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    footer{
+    margin-top: 40px;
+    border-top: 5px solid #6f6f6f;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 30px 100px;;
+    }
+    footer h1{
+        font-family: 'Playfair Display', serif;
+        border-bottom: 1px solid white;
+        width: 20%;
+        padding-bottom: 5px;
+    }
+    footer .services{
+        margin-top: -10px;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    footer .services .service{
+        margin-right: 30px;
+    }
+    footer .services .service p{
+        max-width: 300px;
+    }
+    footer #contact{
+        color: rgb(181, 181, 181);
+    }    
+  </style>
+
   <%- include("partials/header.ejs") %>  
 
   <main>
-    <h1>GFNGames,</h1>
-    <h4>The best of Cloud Gaming.</h4>
-    <a href="/list" class="explore">LIST</a>
+    <section>
+      <h1>GFNGames,</h1>
+      <h4>The best of The Cloud Gaming.</h4>
+    </section>
+    <section class="back">
+
+    </section>
   </main>
+
+  <footer>
+
+    <h1>Services</h1>
+    <div class="services">
+        
+        <div class="service">
+            <h3>Compare cloud services</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quidem recusandae explicabo veniam voluptatem voluptatum reprehenderit dignissimos ipsum magnam accusantium, dolores odio, dolorem provident sapiente consequuntur harum eaque veritatis? Eveniet.</p>
+        </div>
+
+        <div class="service">
+            <h3>List Games</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quidem recusandae explicabo veniam voluptatem voluptatum reprehenderit dignissimos ipsum magnam accusantium, dolores odio, dolorem provident sapiente consequuntur harum eaque veritatis? Eveniet.</p>
+        </div>
+
+        <div class="service">
+            <h3>Affiliation</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quidem recusandae explicabo veniam voluptatem voluptatum reprehenderit dignissimos ipsum magnam accusantium, dolores odio, dolorem provident sapiente consequuntur harum eaque veritatis? Eveniet.</p>
+        </div>
+
+    </div>
+
+  </footer>
 
   <script src="vendor/dark-mode-switch.min.js"></script>
 
