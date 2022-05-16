@@ -9,6 +9,16 @@
 
 <body>
 
+    <style>
+        #slogan{
+          animation: flip 2s infinite;
+        }
+        @keyframes flip {
+            0%,80% {
+                transform: rotateX(360deg) 
+            }
+        }
+    </style>
   <%- include("partials/header.ejs") %>  
 
   <main class="mt-5">
@@ -17,7 +27,7 @@
         <section class="text-center">
             <h1 class="mb-5 font-weight-bold">GFNGames</h1>
             <div class="row d-flex justify-content-center mb-4">
-                <h4>The best of Cloud Gaming</h4>
+                <h4 id="slogan">The best of Cloud Gaming</h4>
             </div>
         </section>
       
