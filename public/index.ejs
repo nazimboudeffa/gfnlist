@@ -9,37 +9,17 @@
 
 <body>
 
-  <style>
-    main section{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px;
-      margin-top: 50px;
-      position: relative;
-    }
-
-    main section h1{
-      font-size: 50px;
-      margin-bottom: 20px;
-    }
-
-    main section h4{
-        margin-bottom: 20px;
-        font-size: 30px;
-        text-align: center;
-    }   
-  </style>
-
   <%- include("partials/header.ejs") %>  
 
   <main class="mt-5">
     <div class="container">
       
-      <section>
-        <h1><b>GFNGames</b></h1>
-        <h4>The best of Cloud Gaming</h4>
-      </section>
+        <section class="text-center">
+            <h1 class="mb-5 font-weight-bold">GFNGames</h1>
+            <div class="row d-flex justify-content-center mb-4">
+                <h4>The best of Cloud Gaming</h4>
+            </div>
+        </section>
       
 
       <!--Section: Best Features-->
