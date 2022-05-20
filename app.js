@@ -18,9 +18,6 @@ app.set('views', path.join(__dirname, '/public'))
 
 app.use(express.static('public'));
 
-const lastModifiedDateOffers = fs.statSync('public/data/steamoffers-new.json').mtime.toISOString().slice(0, 10);
-const lastModifiedDateIG = fs.statSync('public/data/ig.json').mtime.toISOString().slice(0, 10);
-
 app.get('/', function (req, res) {
   res.render('index')
 })
@@ -30,10 +27,12 @@ app.get('/list', function (req, res) {
 })
 
 app.get('/offers', function (req, res) {
+  const lastModifiedDateOffers = fs.statSync('public/data/steamoffers-new.json').mtime.toISOString().slice(0, 10);
   res.render('offers', {last:lastModifiedDateOffers})
 })
 
 app.get('/ig', function (req, res) {
+  const lastModifiedDateIG = fs.statSync('public/data/ig.json').mtime.toISOString().slice(0, 10);
   res.render('ig', {last:lastModifiedDateIG})
 })
 
