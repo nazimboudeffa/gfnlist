@@ -1,5 +1,4 @@
 /node_modules
 privkey.py
 /__pycache__
-/public/data
 .env
